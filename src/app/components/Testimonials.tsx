@@ -4,7 +4,7 @@ import { Quote, Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Tuku-Tuku gave me the structure and mentorship I needed to turn my agriculture idea into a real business. I went from zero to my first 50 customers in 3 months.",
+      "Tuku-Tuku gave me the structure and mentorship to turn my agriculture idea into a real business. I went from zero to 50 customers in 3 months.",
     name: "Grace Aloyo",
     role: "Founder, FreshRoute Uganda",
     cohort: "Incubation Cohort 3",
@@ -12,7 +12,7 @@ const testimonials = [
   },
   {
     quote:
-      "The Innovation Challenge connected me with a co-founder and funding opportunities I never thought I'd access from Gulu. This team genuinely cares about the communities they serve.",
+      "The Innovation Challenge connected me with a co-founder and funding I never thought I'd access from Gulu. This team genuinely cares about the communities they serve.",
     name: "David Okello",
     role: "CEO, BuildSmart Technologies",
     cohort: "Innovation Challenge 2024",
@@ -52,7 +52,7 @@ export function Testimonials() {
             Real Stories. Real Impact.
           </h2>
           <p className="text-lg text-white/75 max-w-2xl mx-auto">
-            From first-time founders to international development organizations — here's what they say about working with Tuku-Tuku.
+            From first-time founders to international development organizations, here's what they say about working with Tuku-Tuku.
           </p>
         </motion.div>
 

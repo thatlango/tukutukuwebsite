@@ -56,7 +56,7 @@ export function FinalCTA() {
                   </div>
                   <div>
                     <p className="font-semibold group-hover:text-accent transition-colors">WhatsApp us</p>
-                    <p className="text-white/65 text-sm">+256 792131316 — fastest response</p>
+                    <p className="text-white/65 text-sm">+256 792131316 · Fastest response</p>
                   </div>
                 </a>
                 <a

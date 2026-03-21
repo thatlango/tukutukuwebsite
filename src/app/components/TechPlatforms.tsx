@@ -16,7 +16,7 @@ const platforms = [
     icon: LayoutDashboard,
     title: "Innovation Program Platforms",
     description:
-      "Custom-built systems to manage incubators and accelerators — application portals, cohort tracking, mentor matching, and milestone reporting in one place.",
+      "Custom-built systems to run incubators and accelerators: application portals, cohort tracking, mentor matching, and milestone reporting.",
     tag: "Most requested",
     highlight: true,
   },
@@ -24,7 +24,7 @@ const platforms = [
     icon: Globe,
     title: "Challenge & Hackathon Portals",
     description:
-      "End-to-end platforms for running innovation challenges: participant registration, team formation, submission management, judging, and public leaderboards.",
+      "Full-stack platforms for innovation challenges: participant registration, team formation, submission management, judging, and public leaderboards.",
     tag: "Built for scale",
     highlight: false,
   },
@@ -32,7 +32,7 @@ const platforms = [
     icon: Smartphone,
     title: "Mobile-First Entrepreneur Tools",
     description:
-      "Lightweight apps and USSD-based tools designed for entrepreneurs with limited connectivity — business trackers, market access tools, and training delivery.",
+      "Lightweight apps and USSD tools built for low-connectivity environments: business trackers, market access tools, and training delivery.",
     tag: "Offline-capable",
     highlight: false,
   },
@@ -40,7 +40,7 @@ const platforms = [
     icon: ShoppingBag,
     title: "Digital Marketplaces",
     description:
-      "Platforms that connect local businesses to buyers, suppliers, and service providers — built with African market realities in mind.",
+      "Platforms connecting local businesses to buyers, suppliers, and service providers. Built for African market realities.",
     tag: "Local-first",
     highlight: false,
   },
@@ -48,7 +48,7 @@ const platforms = [
     icon: BarChart2,
     title: "Impact Dashboards",
     description:
-      "Real-time reporting tools for development organizations and funders to track program performance, entrepreneur outcomes, and economic indicators.",
+      "Real-time dashboards for development organizations and funders to track program performance, entrepreneur outcomes, and economic indicators.",
     tag: "Donor-ready",
     highlight: false,
   },
@@ -56,7 +56,7 @@ const platforms = [
     icon: Database,
     title: "Ecosystem Data Platforms",
     description:
-      "Structured databases and discovery tools that map startup ecosystems, track innovators, and surface insights for governments and investors.",
+      "Structured databases and discovery tools that map startup ecosystems, track innovators, and deliver insights for governments and investors.",
     tag: "Data-driven",
     highlight: false,
   },
@@ -64,9 +64,9 @@ const platforms = [
 
 const buildProcess = [
   { step: "01", title: "Discover", desc: "We map your users, workflows, and constraints before writing a line of code." },
-  { step: "02", title: "Design", desc: "Wireframes and prototypes validated with real users — not just stakeholders." },
+  { step: "02", title: "Design", desc: "Wireframes and prototypes validated with real users, not just stakeholders." },
   { step: "03", title: "Build", desc: "Agile development with regular demos so you see progress every two weeks." },
-  { step: "04", title: "Launch", desc: "Deployment, training, and handover — or ongoing support if you need it." },
+  { step: "04", title: "Launch", desc: "Deployment, training, and handover. Ongoing support available." },
 ];
 
 export function TechPlatforms() {
@@ -94,7 +94,7 @@ export function TechPlatforms() {
             <span className="text-primary">Actually Get Used</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            From innovation program management systems to mobile tools for entrepreneurs with limited connectivity — we build practical, context-aware platforms for the African market.
+            From innovation management systems to mobile tools for low-connectivity entrepreneurs, we build practical, context-aware platforms built for African realities.
           </p>
         </motion.div>
 
@@ -218,7 +218,7 @@ export function TechPlatforms() {
               Have a platform in mind?
             </h3>
             <p className="text-white/80 leading-relaxed mb-6">
-              Whether you need a simple data collection tool or a full-featured innovation management system — we scope it honestly, build it well, and make sure your team can actually use it.
+              Whether you need a simple data collection tool or a full innovation management system, we scope it honestly, build it well, and make sure your team can run it.
             </p>
             <ul className="space-y-2 mb-8 text-sm text-white/70">
               <li className="flex items-center gap-2">

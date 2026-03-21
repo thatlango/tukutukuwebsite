@@ -7,7 +7,7 @@ const offerings = [
     icon: Zap,
     title: "Run a Hackathon",
     description:
-      "We design, facilitate, and deliver end-to-end hackathons for your organization — corporate, sector-specific, or community-wide.",
+      "We design, facilitate, and deliver end-to-end hackathons, whether corporate, sector-specific, or community-wide.",
     cta: "Plan a hackathon",
     href: "#hackathons",
   },
@@ -15,7 +15,7 @@ const offerings = [
     icon: Sparkles,
     title: "Innovation as a Service",
     description:
-      "Hire us to deploy and manage a full innovation program on your behalf — incubators, accelerators, or challenge funds.",
+      "Hire us to deploy and manage a full innovation program on your behalf. Incubators, accelerators, or challenge funds.",
     cta: "Explore IaaS",
     href: "#iaas",
   },
@@ -61,8 +61,8 @@ export function PartnershipSection() {
             Let's Build Something Together
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Governments, NGOs, development agencies, and companies partner with{" "}
-            <strong>Tuku-Tuku Innovation Labs</strong> to unlock economic opportunity across East Africa.
+            Governments, NGOs, development agencies, and companies work with{" "}
+            <strong>Tuku-Tuku Innovation Labs</strong> to drive economic opportunity across East Africa.
           </p>
         </motion.div>
 

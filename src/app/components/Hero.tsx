@@ -63,10 +63,10 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg sm:text-xl lg:text-2xl text-white/95 mb-8 leading-relaxed max-w-3xl"
           >
-            At <strong>Tuku-Tuku Innovation Labs</strong>, we work with
-            entrepreneurs, communities, and organizations to turn bold ideas
-            into real solutions — from startup acceleration to national
-            innovation programs.
+            <strong>Tuku-Tuku Innovation Labs</strong> turns bold ideas into
+            real solutions, from startup acceleration to national innovation
+            programs, for entrepreneurs, communities, and organizations across
+            East Africa.
           </motion.p>
 
           {/* Trust Signals */}
@@ -118,7 +118,7 @@ export function Hero() {
             {!submitted ? (
               <>
                 <p className="text-white/70 text-sm mb-3">
-                  Stay informed — get updates on programs and opportunities:
+                  Get updates on programs and opportunities:
                 </p>
                 <form onSubmit={handleEmailSubmit} className="flex gap-2">
                   <input

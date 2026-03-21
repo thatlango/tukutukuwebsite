@@ -7,25 +7,25 @@ const process = [
     step: "01",
     icon: Megaphone,
     title: "Challenge Design",
-    description: "We work with you to frame the right problem, define success, and structure a compelling challenge that attracts the best participants.",
+    description: "We frame the right problem, define success, and build a compelling challenge that draws in the best participants.",
   },
   {
     step: "02",
     icon: Users,
     title: "Recruitment & Activation",
-    description: "We mobilize participants — startups, students, professionals — from our community network across East Africa.",
+    description: "We mobilize startups, students, and professionals from our community network across East Africa.",
   },
   {
     step: "03",
     icon: Calendar,
     title: "Full-Event Facilitation",
-    description: "We run every element of the event: workshops, mentoring sessions, check-ins, and the pitch finale. You show up and engage.",
+    description: "We run every element: workshops, mentoring sessions, check-ins, and the pitch finale. You show up and engage.",
   },
   {
     step: "04",
     icon: Trophy,
     title: "Judging & Awards",
-    description: "We coordinate judges, scoring, and prizes — ensuring a credible, transparent outcome that builds your brand.",
+    description: "We coordinate judges, scoring, and prizes for a credible, transparent outcome that builds your brand.",
   },
   {
     step: "05",
@@ -68,7 +68,7 @@ export function HackathonServices() {
             We Design & Run World-Class Hackathons
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-            Whether you're a government ministry, corporate, university, or NGO — we handle every detail of your hackathon so you can focus on what matters: the ideas and the people.
+            Whether you're a government ministry, corporate, university, or NGO, we handle every detail so you can focus on what matters: the ideas and the people.
           </p>
         </motion.div>
 
@@ -123,7 +123,7 @@ export function HackathonServices() {
                     <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                     <div>
                       <span className="font-semibold text-foreground text-sm">{f.label}</span>
-                      <span className="text-muted-foreground text-sm"> — {f.desc}</span>
+                      <span className="text-muted-foreground text-sm">: {f.desc}</span>
                     </div>
                   </li>
                 ))}
@@ -133,7 +133,7 @@ export function HackathonServices() {
             <div className="bg-primary rounded-2xl p-8 text-white">
               <h3 className="text-xl font-bold mb-3">Ready to run your hackathon?</h3>
               <p className="text-white/80 text-sm leading-relaxed mb-6">
-                Tell us your challenge, your audience, and your timeline — we'll design the rest. We've been running events since 2016, from 20 to 500+ participants.
+                Tell us your challenge, audience, and timeline. We'll design the rest. We've been running events since 2016, from 20 to 500+ participants.
               </p>
               <Button
                 size="lg"

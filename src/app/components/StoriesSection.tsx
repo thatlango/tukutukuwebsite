@@ -8,7 +8,7 @@ const stories = [
     categoryColor: "bg-primary/10 text-primary",
     title: "Founder stories",
     excerpt:
-      "This week at the lab: 10 founders, one goal — building the future of food systems in Uganda.",
+      "10 founders. One goal: build the future of food systems in Uganda.",
     date: "March 2026",
     image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=600&q=70",
     readTime: "4 min read",

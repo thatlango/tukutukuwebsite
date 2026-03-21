@@ -7,7 +7,7 @@ const services = [
     icon: Lightbulb,
     title: "Innovation Programs",
     description:
-      "Incubators, startup acceleration tracks, and mentorship that help entrepreneurs grow their ideas into real businesses.",
+      "Incubators, acceleration tracks, and mentorship that turn raw ideas into market-ready businesses.",
     color: "text-accent",
     bg: "bg-accent/10 group-hover:bg-accent/20",
   },
@@ -15,7 +15,7 @@ const services = [
     icon: Users,
     title: "Advisory & Consulting",
     description:
-      "We work with governments, NGOs, and development organizations to design entrepreneurship and innovation programs that work.",
+      "We partner with governments, NGOs, and development organizations to design entrepreneurship and innovation programs that deliver results.",
     color: "text-secondary",
     bg: "bg-secondary/10 group-hover:bg-secondary/20",
   },
@@ -23,7 +23,7 @@ const services = [
     icon: Zap,
     title: "Hackathon Design & Delivery",
     description:
-      "We design and run end-to-end hackathons — from challenge framing and participant recruitment to facilitation, judging, and post-event follow-through.",
+      "We design and run end-to-end hackathons, covering challenge framing, participant recruitment, facilitation, judging, and post-event follow-through.",
     color: "text-primary",
     bg: "bg-primary/10 group-hover:bg-primary/20",
   },
@@ -31,7 +31,7 @@ const services = [
     icon: Sparkles,
     title: "Innovation as a Service",
     description:
-      "Don't have an internal innovation team? We become yours. We deploy, manage, and report on full innovation programs on behalf of organizations.",
+      "No internal innovation team? We become yours. We deploy, manage, and report on full innovation programs on your behalf.",
     color: "text-accent-foreground",
     bg: "bg-accent/10 group-hover:bg-accent/20",
   },
@@ -39,7 +39,7 @@ const services = [
     icon: Laptop,
     title: "Technology & Platforms",
     description:
-      "We build digital tools that support entrepreneurs, businesses, and community initiatives across East Africa.",
+      "We build digital tools that power entrepreneurs, businesses, and community initiatives across East Africa.",
     color: "text-primary",
     bg: "bg-primary/10 group-hover:bg-primary/20",
   },
@@ -47,7 +47,7 @@ const services = [
     icon: FileText,
     title: "Research & Insights",
     description:
-      "We gather practical insights that help strengthen innovation ecosystems and local economic development.",
+      "We produce practical insights that strengthen innovation ecosystems and drive local economic development.",
     color: "text-secondary",
     bg: "bg-secondary/10 group-hover:bg-secondary/20",
   },
@@ -76,7 +76,7 @@ export function WhatWeDo() {
             How We Turn Ideas Into Impact
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From startup incubation to full-service innovation programs — we provide the tools, people, and processes organizations need to innovate.
+            From startup incubation to full-service innovation programs, we give organizations the tools, people, and processes to move fast.
           </p>
         </motion.div>
 
