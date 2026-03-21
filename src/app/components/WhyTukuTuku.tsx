@@ -5,19 +5,19 @@ const values = [
   {
     icon: MapPin,
     title: "Local insight",
-    description: "Nearly a decade on the ground across Uganda and East Africa gives us insight no outsider can replicate.",
+    description: "A decade on the ground across Uganda and East Africa gives us insight no outsider can replicate.",
     color: "bg-primary/10 text-primary",
   },
   {
     icon: Heart,
     title: "Entrepreneur-first approach",
-    description: "Our programs are designed around real founders and real challenges.",
+    description: "Our programs are built around real founders facing real challenges, not hypothetical frameworks.",
     color: "bg-secondary/10 text-secondary",
   },
   {
     icon: Lightbulb,
     title: "Practical innovation",
-    description: "We focus on solutions that work in the real world.",
+    description: "We back ideas that work in the real world, not just on a pitch deck.",
     color: "bg-accent/10 text-accent",
   },
 ];

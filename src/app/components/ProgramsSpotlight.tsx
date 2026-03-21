@@ -8,7 +8,7 @@ const programs = [
     icon: Rocket,
     title: "Startup Incubation",
     description:
-      "Early-stage support to validate ideas and build traction. Get mentorship, workspace, and connections to take your venture from idea to market.",
+      "Validate your idea and build real traction. Get mentorship, workspace, and the connections to take your venture from concept to customers.",
     tag: "6-month program",
     color: "bg-primary/10 text-primary",
   },
@@ -16,7 +16,7 @@ const programs = [
     icon: Zap,
     title: "Innovation Challenges & Hackathons",
     description:
-      "Structured sprints that turn local challenges into tested solutions. Compete, collaborate, and build prototypes in 48-72 hours.",
+      "Focused sprints that turn real problems into tested solutions. Compete, collaborate, and ship a working prototype in 48-72 hours.",
     tag: "Open applications",
     color: "bg-accent/10 text-accent-foreground",
   },
@@ -24,7 +24,7 @@ const programs = [
     icon: BookOpen,
     title: "MSME Training Programs",
     description:
-      "Practical workshops that strengthen operations and growth readiness for small and medium enterprises across Uganda and East Africa.",
+      "Hands-on workshops that sharpen operations and unlock growth for small and medium enterprises across Uganda and East Africa.",
     tag: "Rolling enrollment",
     color: "bg-secondary/10 text-secondary",
   },
@@ -32,7 +32,7 @@ const programs = [
     icon: Users,
     title: "Mentorship Networks",
     description:
-      "Founder-focused guidance from operators and ecosystem leaders. Get paired with experienced mentors who've built businesses in Africa.",
+      "Founder-focused guidance from operators and ecosystem leaders who've built businesses in Africa. Get matched with a mentor who gets it.",
     tag: "Year-round",
     color: "bg-primary/10 text-primary",
   },

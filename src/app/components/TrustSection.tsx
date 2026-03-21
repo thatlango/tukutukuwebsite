@@ -24,11 +24,11 @@ export function TrustSection() {
             Trusted by leading organizations
           </p>
           <h2 className="text-2xl sm:text-3xl text-foreground/80 mb-3">
-            Working with entrepreneurs, communities, and development partners
+            Backed by global organizations. Trusted by local communities.
           </h2>
           <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-            We collaborate with institutions and implement programs that create
-            practical economic opportunities across East Africa.
+            We partner with leading institutions to deliver programs that create
+            real economic opportunity across East Africa.
           </p>
         </motion.div>
 
