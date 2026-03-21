@@ -5,27 +5,41 @@ import { WhatWeDo } from "./components/WhatWeDo";
 import { ImpactMetrics } from "./components/ImpactMetrics";
 import { ProgramsSpotlight } from "./components/ProgramsSpotlight";
 import { WhyTukuTuku } from "./components/WhyTukuTuku";
+import { Testimonials } from "./components/Testimonials";
 import { StoriesSection } from "./components/StoriesSection";
 import { PartnershipSection } from "./components/PartnershipSection";
 import { FinalCTA } from "./components/FinalCTA";
 import { Footer } from "./components/Footer";
+import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 
 export default function App() {
   return (
     <div className="min-h-screen">
       <Header />
       <main>
-        <Hero />
+        <section id="home">
+          <Hero />
+        </section>
         <TrustSection />
-        <WhatWeDo />
+        <section id="about">
+          <WhatWeDo />
+        </section>
         <ImpactMetrics />
-        <ProgramsSpotlight />
+        <section id="programs">
+          <ProgramsSpotlight />
+        </section>
         <WhyTukuTuku />
+        <Testimonials />
         <StoriesSection />
-        <PartnershipSection />
-        <FinalCTA />
+        <section id="consulting">
+          <PartnershipSection />
+        </section>
+        <section id="contact">
+          <FinalCTA />
+        </section>
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }

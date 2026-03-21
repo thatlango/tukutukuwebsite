@@ -1,32 +1,49 @@
 import { motion } from "motion/react";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Rocket, Zap, BookOpen, Users } from "lucide-react";
 
 const programs = [
   {
-    title: "Startup incubation",
+    icon: Rocket,
+    title: "Startup Incubation",
     description:
-      "Early-stage support to validate ideas and build traction.",
+      "Early-stage support to validate ideas and build traction. Get mentorship, workspace, and connections to take your venture from idea to market.",
+    tag: "6-month program",
+    color: "bg-primary/10 text-primary",
   },
   {
-    title: "Innovation challenges and hackathons",
+    icon: Zap,
+    title: "Innovation Challenges & Hackathons",
     description:
-      "Structured sprints that turn local challenges into tested solutions.",
+      "Structured sprints that turn local challenges into tested solutions. Compete, collaborate, and build prototypes in 48-72 hours.",
+    tag: "Open applications",
+    color: "bg-accent/10 text-accent-foreground",
   },
   {
-    title: "MSME training programs",
+    icon: BookOpen,
+    title: "MSME Training Programs",
     description:
-      "Practical workshops that strengthen operations and growth readiness.",
+      "Practical workshops that strengthen operations and growth readiness for small and medium enterprises across Northern Uganda.",
+    tag: "Rolling enrollment",
+    color: "bg-secondary/10 text-secondary",
   },
   {
-    title: "Mentorship networks",
+    icon: Users,
+    title: "Mentorship Networks",
     description:
-      "Founder-focused guidance from operators and ecosystem leaders.",
+      "Founder-focused guidance from operators and ecosystem leaders. Get paired with experienced mentors who've built businesses in Africa.",
+    tag: "Year-round",
+    color: "bg-primary/10 text-primary",
   },
 ];
 
 export function ProgramsSpotlight() {
+  const scrollToContact = () => {
+    const el = document.getElementById("contact");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="py-20 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,9 +52,12 @@ export function ProgramsSpotlight() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-8"
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <span className="text-sm uppercase tracking-widest text-primary font-semibold">
+            Our Programs
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-4">
             Programs That Help Builders Grow
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -47,26 +67,43 @@ export function ProgramsSpotlight() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
-          {programs.map((program, index) => (
-            <motion.div
-              key={program.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="h-full border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group cursor-pointer">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-3 text-foreground">
-                    {program.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed text-lg">
-                    {program.description}
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+          {programs.map((program, index) => {
+            const Icon = program.icon;
+            return (
+              <motion.div
+                key={program.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group cursor-pointer">
+                  <CardContent className="p-8">
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className={`w-12 h-12 rounded-xl ${program.color} flex items-center justify-center flex-shrink-0`}>
+                        <Icon className="h-6 w-6" />
+                      </div>
+                      <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground bg-muted px-3 py-1 rounded-full self-start">
+                        {program.tag}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
+                      {program.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      {program.description}
+                    </p>
+                    <button
+                      onClick={scrollToContact}
+                      className="inline-flex items-center gap-1.5 text-primary font-semibold text-sm hover:gap-2.5 transition-all duration-200"
+                    >
+                      Apply Now <ArrowRight className="h-4 w-4" />
+                    </button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            );
+          })}
         </div>
 
         <motion.div
@@ -78,11 +115,15 @@ export function ProgramsSpotlight() {
         >
           <Button
             size="lg"
-            className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8 py-6"
+            className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8 py-6 font-semibold shadow-lg"
+            onClick={scrollToContact}
           >
-            Explore Programs
+            Apply to a Program
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Not sure which program fits? <button onClick={scrollToContact} className="text-primary font-medium hover:underline">Talk to us</button>
+          </p>
         </motion.div>
       </div>
     </section>
