@@ -12,7 +12,7 @@ const testimonials = [
   },
   {
     quote:
-      "The Innovation Challenge connected me with a co-founder and funding opportunities I never thought I'd access from Gulu. This team genuinely cares about Northern Uganda.",
+      "The Innovation Challenge connected me with a co-founder and funding opportunities I never thought I'd access from Gulu. This team genuinely cares about the communities they serve.",
     name: "David Okello",
     role: "CEO, BuildSmart Technologies",
     cohort: "Innovation Challenge 2024",

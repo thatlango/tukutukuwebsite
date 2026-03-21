@@ -24,7 +24,7 @@ const programs = [
     icon: BookOpen,
     title: "MSME Training Programs",
     description:
-      "Practical workshops that strengthen operations and growth readiness for small and medium enterprises across Northern Uganda.",
+      "Practical workshops that strengthen operations and growth readiness for small and medium enterprises across Uganda and East Africa.",
     tag: "Rolling enrollment",
     color: "bg-secondary/10 text-secondary",
   },

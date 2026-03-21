@@ -72,7 +72,7 @@ export function ImpactMetrics() {
             Innovation That Starts Local
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Since 2016, we've been on the ground in Northern Uganda — unlocking
+            Since 2016, we've been on the ground across Uganda and East Africa — unlocking
             the talent, creativity, and resilience that was always here.
           </p>
         </motion.div>
