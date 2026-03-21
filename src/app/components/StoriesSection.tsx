@@ -8,7 +8,7 @@ const stories = [
     categoryColor: "bg-primary/10 text-primary",
     title: "Founder stories",
     excerpt:
-      "This week at the lab: 10 founders, one goal — building the future of food systems in Northern Uganda.",
+      "This week at the lab: 10 founders, one goal — building the future of food systems in Uganda.",
     date: "March 2026",
     image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=600&q=70",
     readTime: "4 min read",
@@ -28,7 +28,7 @@ const stories = [
     categoryColor: "bg-secondary/10 text-secondary",
     title: "Innovation insights",
     excerpt:
-      "Lessons from Northern Uganda that can shape innovation ecosystems across Africa. What we've learned after 45+ programs.",
+      "Lessons from Uganda that can shape innovation ecosystems across Africa. What we've learned after 45+ programs since 2016.",
     date: "January 2026",
     image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=70",
     readTime: "8 min read",
@@ -58,7 +58,7 @@ export function StoriesSection() {
             What's Happening at Tuku-Tuku
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Stories, programs, and insights from the heart of Northern Uganda's innovation ecosystem.
+            Stories, programs, and insights from across Uganda and East Africa.
           </p>
         </motion.div>
 

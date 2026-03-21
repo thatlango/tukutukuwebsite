@@ -41,7 +41,7 @@ export function Hero() {
             className="mb-4"
           >
             <span className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 text-accent text-sm sm:text-base uppercase tracking-wider font-semibold px-4 py-1.5 rounded-full">
-              🌍 African innovation hub rooted in Gulu, Uganda
+              African innovation hub rooted in Gulu, Uganda
             </span>
           </motion.div>
 

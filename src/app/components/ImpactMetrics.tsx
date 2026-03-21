@@ -72,8 +72,8 @@ export function ImpactMetrics() {
             Innovation That Starts Local
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Northern Uganda is full of talent, creativity, and resilience. Our
-            work helps unlock that potential and turn it into opportunity.
+            Since 2016, we've been on the ground across Uganda and East Africa — unlocking
+            the talent, creativity, and resilience that was always here.
           </p>
         </motion.div>
 

@@ -30,6 +30,8 @@ export function Footer() {
   const quickLinks = [
     { label: "About Us", id: "about" },
     { label: "Programs", id: "programs" },
+    { label: "Hackathons", id: "hackathons" },
+    { label: "Platforms", id: "platforms" },
     { label: "Consulting", id: "consulting" },
     { label: "Contact", id: "contact" },
   ];
@@ -50,7 +52,7 @@ export function Footer() {
             </div>
             <p className="text-white/70 leading-relaxed mb-6 text-sm">
               Innovation grows where communities believe in their own ideas.
-              Supporting entrepreneurs across East Africa since 2020.
+              Supporting entrepreneurs across East Africa since 2016.
             </p>
             {/* Social links */}
             <div className="flex gap-3">
