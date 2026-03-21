@@ -28,7 +28,7 @@ const stories = [
     categoryColor: "bg-secondary/10 text-secondary",
     title: "Innovation insights",
     excerpt:
-      "Lessons from Northern Uganda that can shape innovation ecosystems across Africa. What we've learned after 45+ programs.",
+      "Lessons from Northern Uganda that can shape innovation ecosystems across Africa. What we've learned after 45+ programs since 2016.",
     date: "January 2026",
     image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=70",
     readTime: "8 min read",

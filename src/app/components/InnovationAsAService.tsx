@@ -77,7 +77,7 @@ export function InnovationAsAService() {
               Organizations across East Africa hire Tuku-Tuku to design, launch, and manage full innovation programs on their behalf — from scoping to final impact report.
             </p>
             <p className="text-white/65 leading-relaxed text-sm">
-              We bring the ecosystem knowledge, program infrastructure, community networks, and proven methodologies so your organization can deliver real innovation outcomes without building the capability from scratch.
+              With nearly a decade of on-the-ground experience since 2016, we bring the ecosystem knowledge, program infrastructure, community networks, and proven methodologies so your organization can deliver real innovation outcomes without building the capability from scratch.
             </p>
           </motion.div>
 

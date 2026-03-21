@@ -133,7 +133,7 @@ export function HackathonServices() {
             <div className="bg-primary rounded-2xl p-8 text-white">
               <h3 className="text-xl font-bold mb-3">Ready to run your hackathon?</h3>
               <p className="text-white/80 text-sm leading-relaxed mb-6">
-                Tell us your challenge, your audience, and your timeline — we'll design the rest. We've run events for 20 to 500+ participants.
+                Tell us your challenge, your audience, and your timeline — we'll design the rest. We've been running events since 2016, from 20 to 500+ participants.
               </p>
               <Button
                 size="lg"

@@ -5,7 +5,7 @@ const values = [
   {
     icon: MapPin,
     title: "Local insight",
-    description: "We understand the communities we serve.",
+    description: "Nearly a decade on the ground in Northern Uganda gives us insight no outsider can replicate.",
     color: "bg-primary/10 text-primary",
   },
   {
