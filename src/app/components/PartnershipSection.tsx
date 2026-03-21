@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Button } from "./ui/button";
-import { ArrowRight, Zap, Sparkles, Building2 } from "lucide-react";
+import { ArrowRight, Zap, Sparkles, Laptop, Building2 } from "lucide-react";
 
 const offerings = [
   {
@@ -18,6 +18,14 @@ const offerings = [
       "Hire us to deploy and manage a full innovation program on your behalf — incubators, accelerators, or challenge funds.",
     cta: "Explore IaaS",
     href: "#iaas",
+  },
+  {
+    icon: Laptop,
+    title: "Build a Platform",
+    description:
+      "We build digital tools and platforms that support innovation programs, entrepreneur communities, and development outcomes.",
+    cta: "See what we build",
+    href: "#platforms",
   },
   {
     icon: Building2,
@@ -58,7 +66,7 @@ export function PartnershipSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {offerings.map((item, index) => {
             const Icon = item.icon;
             return (

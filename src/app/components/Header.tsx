@@ -18,6 +18,7 @@ export function Header() {
     { label: "About", href: "#about" },
     { label: "Programs", href: "#programs" },
     { label: "Services", href: "#hackathons" },
+    { label: "Platforms", href: "#platforms" },
     { label: "Consulting", href: "#consulting" },
     { label: "Contact", href: "#contact" },
   ];

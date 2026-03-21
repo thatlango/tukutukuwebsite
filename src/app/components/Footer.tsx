@@ -30,6 +30,8 @@ export function Footer() {
   const quickLinks = [
     { label: "About Us", id: "about" },
     { label: "Programs", id: "programs" },
+    { label: "Hackathons", id: "hackathons" },
+    { label: "Platforms", id: "platforms" },
     { label: "Consulting", id: "consulting" },
     { label: "Contact", id: "contact" },
   ];
