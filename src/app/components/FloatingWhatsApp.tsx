@@ -51,7 +51,7 @@ export function FloatingWhatsApp() {
               <div className="bg-white rounded-xl rounded-tl-none p-4 shadow-sm max-w-[85%] text-sm text-gray-800 leading-relaxed">
                 👋 Hi there! Ready to build something great?
                 <br /><br />
-                Whether you have a startup idea, want to partner with us, or just have questions — we're here to help.
+                Got a startup idea, a partnership in mind, or just a question? We're here to help.
                 <span className="block text-[10px] text-gray-400 mt-2 text-right">Tuku-Tuku Team</span>
               </div>
             </div>

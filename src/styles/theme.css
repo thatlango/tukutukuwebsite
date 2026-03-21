@@ -138,6 +138,7 @@
 
   html {
     font-size: var(--font-size);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   }
 
   h1 {

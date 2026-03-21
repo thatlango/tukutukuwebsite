@@ -6,12 +6,12 @@ const phases = [
   {
     icon: Search,
     title: "Diagnose",
-    description: "We assess your organization's innovation goals, ecosystem context, and the problem space you want to address.",
+    description: "We assess your innovation goals, ecosystem context, and the problem space you want to tackle.",
   },
   {
     icon: PenTool,
     title: "Design",
-    description: "We build a custom innovation program — incubator, accelerator, challenge fund, or hybrid — tailored to your objectives and budget.",
+    description: "We build a custom program (incubator, accelerator, challenge fund, or hybrid) tailored to your objectives and budget.",
   },
   {
     icon: Play,
@@ -21,7 +21,7 @@ const phases = [
   {
     icon: BarChart3,
     title: "Report",
-    description: "You get clear impact data — businesses supported, jobs created, revenue generated — ready for your board, donors, or stakeholders.",
+    description: "You get clear impact data on businesses supported, jobs created, and revenue generated, ready for your board, donors, or stakeholders.",
   },
 ];
 
@@ -74,10 +74,10 @@ export function InnovationAsAService() {
               <span className="text-accent">We become yours.</span>
             </h2>
             <p className="text-lg text-white/80 leading-relaxed mb-6">
-              Organizations across East Africa hire Tuku-Tuku to design, launch, and manage full innovation programs on their behalf — from scoping to final impact report.
+              Organizations across East Africa hire Tuku-Tuku to design, launch, and manage full innovation programs on their behalf. We handle everything from scoping to final impact report.
             </p>
             <p className="text-white/65 leading-relaxed text-sm">
-              With nearly a decade of on-the-ground experience since 2016, we bring the ecosystem knowledge, program infrastructure, community networks, and proven methodologies so your organization can deliver real innovation outcomes without building the capability from scratch.
+              Since 2016, we've built the ecosystem knowledge, infrastructure, and community networks so you get real innovation outcomes without starting from scratch.
             </p>
           </motion.div>
 
@@ -174,7 +174,7 @@ export function InnovationAsAService() {
               Let's scope your program
             </h3>
             <p className="text-white/75 text-sm leading-relaxed mb-6">
-              Every IaaS engagement starts with a free scoping conversation. Tell us your goals, budget, and timeline — we'll show you what's possible.
+              Every IaaS engagement starts with a free scoping call. Tell us your goals, budget, and timeline and we'll show you what's possible.
             </p>
             <ul className="space-y-2 mb-8 text-sm text-white/70">
               <li className="flex items-center gap-2"><span className="text-accent">✓</span> No long-term lock-in required</li>

@@ -8,7 +8,7 @@ const stories = [
     categoryColor: "bg-primary/10 text-primary",
     title: "Founder stories",
     excerpt:
-      "This week at the lab: 10 founders, one goal — building the future of food systems in Uganda.",
+      "10 founders. One goal: build the future of food systems in Uganda.",
     date: "March 2026",
     image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=600&q=70",
     readTime: "4 min read",
@@ -18,7 +18,7 @@ const stories = [
     categoryColor: "bg-accent/15 text-accent-foreground",
     title: "Program highlights",
     excerpt:
-      "New cohorts are turning local challenges into practical ventures. See how our latest batch tackled water access and agri-logistics.",
+      "New cohorts are turning local challenges into real ventures. Our latest batch tackled water access and agri-logistics head-on.",
     date: "February 2026",
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=70",
     readTime: "6 min read",
@@ -28,7 +28,7 @@ const stories = [
     categoryColor: "bg-secondary/10 text-secondary",
     title: "Innovation insights",
     excerpt:
-      "Lessons from Uganda that can shape innovation ecosystems across Africa. What we've learned after 45+ programs since 2016.",
+      "What 45+ programs since 2016 have taught us about building innovation ecosystems in Africa.",
     date: "January 2026",
     image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=70",
     readTime: "8 min read",
