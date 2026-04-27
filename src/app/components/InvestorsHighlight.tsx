@@ -57,7 +57,7 @@ export function InvestorsHighlight() {
               size="lg"
               variant="outline"
               className="border-primary-foreground/40 text-primary-foreground hover:bg-white/10"
-              onClick={() => scrollTo("consulting")}
+              onClick={() => scrollTo("contact")}
             >
               Partner With Us
             </Button>

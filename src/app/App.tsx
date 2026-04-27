@@ -1,7 +1,11 @@
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { TrustSection } from "./components/TrustSection";
-import { WhatWeDo } from "./components/WhatWeDo";
+import { AboutSection } from "./components/AboutSection";
+import { UserSegmentation } from "./components/UserSegmentation";
+import { ServicesOverview } from "./components/ServicesOverview";
+import { CaseStudiesSection } from "./components/CaseStudiesSection";
+import { ProgramsProductsSection } from "./components/ProgramsProductsSection";
 import { ImpactMetrics } from "./components/ImpactMetrics";
 import { HowWeBuildInnovation } from "./components/HowWeBuildInnovation";
 import { PipelineSection } from "./components/PipelineSection";

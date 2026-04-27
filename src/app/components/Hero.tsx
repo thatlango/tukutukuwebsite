@@ -92,7 +92,7 @@ export function Hero() {
             <Button
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8 py-6 font-semibold shadow-lg"
-              onClick={() => scrollTo("consulting")}
+              onClick={() => scrollTo("contact")}
             >
               Work With Us
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -101,7 +101,7 @@ export function Hero() {
               size="lg"
               variant="outline"
               className="bg-white/10 text-white border-white/40 hover:bg-white/25 text-lg px-8 py-6 font-semibold"
-              onClick={() => scrollTo("about")}
+              onClick={() => scrollTo("case-studies")}
             >
               View Case Studies
             </Button>
