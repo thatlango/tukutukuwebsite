@@ -41,20 +41,26 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-foreground text-white py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <footer className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white py-20 overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 pointer-events-none opacity-10">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-gradient-primary text-white flex items-center justify-center font-bold text-base flex-shrink-0 shadow-lg">
                 TT
-              </span>
-              <span className="font-bold text-lg leading-tight">
+              </div>
+              <span className="font-black text-lg leading-tight">
                 Tuku-Tuku<br />Innovation Labs
               </span>
             </div>
-            <p className="text-white/70 leading-relaxed mb-6 text-sm">
+            <p className="text-white/70 leading-relaxed mb-8 text-sm">
               Innovation grows where communities believe in their own ideas.
               Supporting entrepreneurs across East Africa since 2016.
             </p>
@@ -68,12 +74,12 @@ export function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.15, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-10 h-10 rounded-full bg-white/10 hover:bg-accent flex items-center justify-center transition-colors"
+                    className="w-12 h-12 rounded-full bg-gradient-primary hover:shadow-lg flex items-center justify-center transition-all duration-300 hover-lift"
                     aria-label={social.label}
                   >
-                    <Icon className="h-5 w-5" />
+                    <Icon className="h-5 w-5 text-white" />
                   </motion.a>
                 );
               })}
@@ -82,16 +88,21 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-base font-bold mb-5">Quick Links</h4>
+            <h4 className="text-base font-black mb-6 text-white flex items-center gap-2">
+              <div className="h-1 w-6 bg-gradient-secondary rounded-full"></div>
+              Quick Links
+            </h4>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
+              {quickLinks.slice(0, 7).map((link) => (
                 <li key={link.label}>
-                  <Link
-                    to={link.to}
-                    className="text-white/70 hover:text-accent text-sm transition-colors hover:translate-x-1 inline-block transition-transform duration-200"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.to ? (
+                    <Link
+                      to={link.to}
+                      className="text-white/70 hover:text-secondary text-sm font-medium transition-all duration-300 hover:translate-x-1 inline-block"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : null}
                 </li>
               ))}
             </ul>
@@ -99,71 +110,60 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-base font-bold mb-5">Contact</h4>
-            <div className="space-y-3 text-white/70 text-sm">
-              <div className="flex items-start gap-3">
-                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-accent" />
-                <span>Gulu, Uganda<br />East Africa</span>
+            <h4 className="text-base font-black mb-6 text-white flex items-center gap-2">
+              <div className="h-1 w-6 bg-gradient-accent rounded-full"></div>
+              Contact
+            </h4>
+            <div className="space-y-4 text-white/70 text-sm">
+              <div className="flex items-start gap-3 hover:text-accent transition-colors duration-300 group">
+                <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-secondary group-hover:text-accent transition-colors" />
+                <span className="leading-relaxed">Gulu, Uganda<br />East Africa</span>
               </div>
-              <div className="flex items-center gap-3">
-                <Mail className="h-4 w-4 flex-shrink-0 text-accent" />
-                <a
-                  href="mailto:info@tukutuku.org"
-                  className="hover:text-accent transition-colors"
-                >
-                  info@tukutuku.org
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="h-4 w-4 flex-shrink-0 text-accent" />
-                <a
-                  href="tel:+256792131316"
-                  className="hover:text-accent transition-colors"
-                >
-                  +256 792131316
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <MessageCircle className="h-4 w-4 flex-shrink-0 text-accent" />
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-accent transition-colors"
-                >
-                  WhatsApp us
-                </a>
-              </div>
+              <a href="mailto:info@tukutuku.org" className="flex items-center gap-3 hover:text-accent transition-colors duration-300 group">
+                <Mail className="h-5 w-5 flex-shrink-0 text-secondary group-hover:text-accent transition-colors" />
+                <span className="font-medium">info@tukutuku.org</span>
+              </a>
+              <a href="tel:+256792131316" className="flex items-center gap-3 hover:text-accent transition-colors duration-300 group">
+                <Phone className="h-5 w-5 flex-shrink-0 text-secondary group-hover:text-accent transition-colors" />
+                <span className="font-medium">+256 792131316</span>
+              </a>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-accent transition-colors duration-300 group">
+                <MessageCircle className="h-5 w-5 flex-shrink-0 text-secondary group-hover:text-accent transition-colors" />
+                <span className="font-medium">WhatsApp us</span>
+              </a>
             </div>
           </div>
 
           {/* Newsletter */}
           <div>
-            <h4 className="text-base font-bold mb-2">Stay Updated</h4>
-            <p className="text-white/60 text-sm mb-4">
-              Get program updates, innovation insights, and opportunities delivered to your inbox.
+            <h4 className="text-base font-black mb-6 text-white flex items-center gap-2">
+              <div className="h-1 w-6 bg-gradient-primary rounded-full"></div>
+              Stay Updated
+            </h4>
+            <p className="text-white/60 text-sm mb-4 font-medium">
+              Get insights delivered to your inbox.
             </p>
             {!newsletterSubmitted ? (
-              <form onSubmit={handleNewsletter} className="space-y-2">
+              <form onSubmit={handleNewsletter} className="space-y-3">
                 <input
                   type="email"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   placeholder="your@email.com"
                   required
-                  className="w-full px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 text-sm focus:outline-none focus:border-accent focus:bg-white/15 transition-all"
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm font-medium focus:outline-none focus:border-secondary focus:bg-white/15 transition-all duration-300 hover:bg-white/15"
                 />
                 <Button
                   type="submit"
-                  className="w-full bg-accent text-accent-foreground hover:bg-accent/90 text-sm font-semibold py-2.5"
+                  className="w-full bg-gradient-secondary text-white hover:shadow-lg font-bold py-3 rounded-lg hover-lift text-sm"
                 >
-                  Subscribe to Newsletter
+                  Subscribe
                 </Button>
               </form>
             ) : (
-              <div className="flex items-center gap-2 bg-accent/15 border border-accent/30 rounded-lg px-3 py-2.5">
-                <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
-                <span className="text-sm text-white/85">You're subscribed!</span>
+              <div className="flex items-center gap-3 bg-gradient-accent/20 border border-accent/40 rounded-lg px-4 py-3">
+                <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
+                <span className="text-sm font-medium text-white/90">You're subscribed!</span>
               </div>
             )}
           </div>
@@ -171,15 +171,15 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-white/50 text-sm">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-white/50 text-sm font-medium">
             <p>
               © 2026 Tuku-Tuku Innovation Labs. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="#" className="hover:text-white transition-colors duration-300">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="#" className="hover:text-white transition-colors duration-300">
                 Terms of Service
               </a>
             </div>
