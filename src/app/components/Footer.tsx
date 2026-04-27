@@ -31,6 +31,13 @@ export function Footer() {
     { label: "Innovation", to: "/innovation" },
     { label: "Investors", to: "/investors" },
     { label: "Contact", to: "/contact" },
+    { label: "About Us", id: "about" },
+    { label: "Services", id: "services" },
+    { label: "Case Studies", id: "case-studies" },
+    { label: "Programs", id: "programs" },
+    { label: "Innovation", id: "innovation" },
+    { label: "Investors", id: "investors" },
+    { label: "Contact", id: "contact" },
   ];
 
   return (
