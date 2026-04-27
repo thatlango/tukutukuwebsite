@@ -9,9 +9,16 @@ import { ProgramsProductsSection } from "./components/ProgramsProductsSection";
 import { ImpactMetrics } from "./components/ImpactMetrics";
 import { HowWeBuildInnovation } from "./components/HowWeBuildInnovation";
 import { PipelineSection } from "./components/PipelineSection";
+import { ProgramsSpotlight } from "./components/ProgramsSpotlight";
+import { HackathonServices } from "./components/HackathonServices";
+import { InnovationAsAService } from "./components/InnovationAsAService";
+import { TechPlatforms } from "./components/TechPlatforms";
+import { WhyTukuTuku } from "./components/WhyTukuTuku";
 import { InvestorsHighlight } from "./components/InvestorsHighlight";
-import { CTA } from "./components/CTA";
-import { ContactSection } from "./components/ContactSection";
+import { Testimonials } from "./components/Testimonials";
+import { StoriesSection } from "./components/StoriesSection";
+import { PartnershipSection } from "./components/PartnershipSection";
+import { FinalCTA } from "./components/FinalCTA";
 import { Footer } from "./components/Footer";
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 
@@ -24,26 +31,28 @@ export default function App() {
           <Hero />
         </section>
         <TrustSection />
-        <UserSegmentation />
-        <ServicesOverview />
-        <CaseStudiesSection />
-        <ProgramsProductsSection />
+        <section id="about">
+          <WhatWeDo />
+        </section>
         <HowWeBuildInnovation />
         <PipelineSection />
         <ImpactMetrics />
-        <AboutSection />
+        <section id="programs">
+          <ProgramsSpotlight />
+        </section>
+        <HackathonServices />
+        <InnovationAsAService />
+        <TechPlatforms />
+        <WhyTukuTuku />
         <InvestorsHighlight />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <CTA
-            title="Need a trusted execution partner for East Africa?"
-            description="From discovery to delivery, we help institutions and partners run high-quality programs and systems with measurable outcomes."
-            primaryLabel="Work With Us"
-            primaryTarget="contact"
-            secondaryLabel="Partner"
-            secondaryTarget="contact"
-          />
-        </div>
-        <ContactSection />
+        <Testimonials />
+        <StoriesSection />
+        <section id="consulting">
+          <PartnershipSection />
+        </section>
+        <section id="contact">
+          <FinalCTA />
+        </section>
       </main>
       <Footer />
       <FloatingWhatsApp />
