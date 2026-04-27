@@ -269,8 +269,3 @@ export default function InvestorsPage() {
     </main>
   );
 }
-        />
-      </div>
-    </main>
-  );
-}
