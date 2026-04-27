@@ -139,35 +139,6 @@ export function Hero() {
     </section>
   );
 }
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative mx-auto w-full max-w-xl"
-          >
-            <div className="rounded-[2rem] border border-border bg-white p-5 shadow-xl">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="overflow-hidden rounded-[1.5rem] bg-slate-200">
-                  <img
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80"
-                    alt="Innovation team workshop"
-                    className="h-64 w-full object-cover"
-                  />
-                </div>
-                <div className="space-y-4">
-                  <div className="rounded-[1.5rem] bg-primary text-white p-5">
-                    <p className="text-sm uppercase tracking-[0.24em] font-semibold text-white/80">Infrastructure-focused programs</p>
-                    <p className="mt-3 text-lg font-bold">Systems, pipelines, and local delivery</p>
-                  </div>
-                  <div className="rounded-[1.5rem] bg-slate-100 p-5 text-sm text-foreground">
-                    Built for investors, institutions, founders and partners who need execution certainty.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="pointer-events-none absolute -bottom-6 left-8 hidden rounded-full border border-white bg-white/90 px-4 py-3 shadow-xl md:block">
-              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Pipeline focus</p>
-              <p className="mt-1 text-sm font-semibold text-primary">Source → Train → Validate → Build → Prepare → Connect</p>
-            </div>
           </motion.div>
         </div>
       </div>
