@@ -88,32 +88,45 @@ export default function ContactPage() {
         <div className="max-w-2xl mx-auto">
           <Card>
             <CardContent className="pt-6">
-              <form className="space-y-6">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <div style={{ display: 'none' }}>
+                  <label>
+                    Don't fill this out if you're human: <input name="bot-field" />
+                  </label>
+                </div>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="firstName">First Name *</Label>
-                    <Input id="firstName" placeholder="Your first name" required />
+                    <Input id="firstName" name="firstName" placeholder="Your first name" required />
                   </div>
                   <div>
                     <Label htmlFor="lastName">Last Name *</Label>
-                    <Input id="lastName" placeholder="Your last name" required />
+                    <Input id="lastName" name="lastName" placeholder="Your last name" required />
                   </div>
                 </div>
 
                 <div>
                   <Label htmlFor="email">Email Address *</Label>
-                  <Input id="email" type="email" placeholder="your.email@organization.com" required />
+                  <Input id="email" name="email" type="email" placeholder="your.email@organization.com" required />
                 </div>
 
                 <div>
                   <Label htmlFor="organization">Organization</Label>
-                  <Input id="organization" placeholder="Your organization name" />
+                  <Input id="organization" name="organization" placeholder="Your organization name" />
                 </div>
 
                 <div>
                   <Label htmlFor="project-type">What are you interested in? *</Label>
                   <select
                     id="project-type"
+                    name="project-type"
                     className="w-full px-3 py-2 border border-input rounded-md bg-background"
                     required
                   >
@@ -129,6 +142,7 @@ export default function ContactPage() {
                   <Label htmlFor="message">Message *</Label>
                   <Textarea
                     id="message"
+                    name="message"
                     placeholder="Tell us about your needs, goals, and how we can help..."
                     rows={6}
                     required
