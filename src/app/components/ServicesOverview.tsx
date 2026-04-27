@@ -31,8 +31,8 @@ export function ServicesOverview() {
   return (
     <Section
       id="services"
-      eyebrow="Services"
-      title="What we build"
+      eyebrow="Our Services"
+      title="What Service We Offer"
       description="Each service is designed as infrastructure: clear purpose, clear users, and clear outcomes."
     >
       <div className="grid md:grid-cols-2 gap-5">

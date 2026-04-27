@@ -4,8 +4,8 @@ export function AboutSection() {
   return (
     <Section
       id="about"
-      eyebrow="About Tuku-Tuku"
-      title="Built in Northern Uganda. Deployed across East Africa."
+      eyebrow="About Us"
+      title="We Are The Best Innovation Partner in Town"
       description="Our origin is Northern Uganda, where constraints are real and execution quality matters. That foundation shaped our philosophy: we build what stays."
       className="bg-muted/30"
     >
