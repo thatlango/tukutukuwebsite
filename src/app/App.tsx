@@ -1,3 +1,6 @@
+import HomePage from "./page";
+
+export default HomePage;
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { TrustSection } from "./components/TrustSection";

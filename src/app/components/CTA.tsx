@@ -20,6 +20,10 @@ export function CTA({
   dark = false,
 }: CTAProps) {
   const scrollTo = (id: string) => {
+    if (id.startsWith("/")) {
+      window.location.href = id;
+      return;
+    }
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };

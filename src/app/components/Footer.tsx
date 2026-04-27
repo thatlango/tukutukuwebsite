@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { MapPin, Mail, Phone, Linkedin, Facebook, MessageCircle, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
+import { Link } from "react-router";
 
 export function Footer() {
   const [newsletterEmail, setNewsletterEmail] = useState("");
@@ -22,12 +23,14 @@ export function Footer() {
     { icon: MessageCircle, label: "WhatsApp", href: whatsappUrl },
   ];
 
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
   const quickLinks = [
+    { label: "About Us", to: "/about" },
+    { label: "Services", to: "/services" },
+    { label: "Case Studies", to: "/case-studies" },
+    { label: "Programs", to: "/programs" },
+    { label: "Innovation", to: "/innovation" },
+    { label: "Investors", to: "/investors" },
+    { label: "Contact", to: "/contact" },
     { label: "About Us", id: "about" },
     { label: "Services", id: "services" },
     { label: "Case Studies", id: "case-studies" },
@@ -83,12 +86,12 @@ export function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <button
-                    onClick={() => scrollTo(link.id)}
+                  <Link
+                    to={link.to}
                     className="text-white/70 hover:text-accent text-sm transition-colors hover:translate-x-1 inline-block transition-transform duration-200"
                   >
                     {link.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -23,6 +23,8 @@ const programs = [
 ];
 
 export function ProgramsProductsSection() {
+  const goToContact = () => {
+    window.location.href = "/contact";
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -47,6 +49,7 @@ export function ProgramsProductsSection() {
       </div>
       <Button
         className="bg-primary text-primary-foreground hover:bg-primary/90"
+        onClick={goToContact}
         onClick={() => scrollTo("contact")}
       >
         Apply to a Program
