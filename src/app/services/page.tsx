@@ -133,13 +133,13 @@ export default function ServicesPage() {
 
       {/* What Makes Us Different */}
       <Section
-        title=\"What Makes Us Different\"
-        className=\"bg-muted/30\"
+        title="What Makes Us Different"
+        className="bg-muted/30"
       >
-        <div className=\"max-w-3xl space-y-4\">
+        <div className="max-w-3xl space-y-4">
           {differentiators.map((diff) => (
-            <div key={diff} className=\"flex items-start gap-3 p-4 bg-background rounded-lg border\">
-              <CheckCircle className=\"h-5 w-5 text-primary mt-0.5 flex-shrink-0\" />
+            <div key={diff} className="flex items-start gap-3 p-4 bg-background rounded-lg border">
+              <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
               <p>{diff}</p>
             </div>
           ))}
@@ -147,7 +147,7 @@ export default function ServicesPage() {
       </Section>
 
       {/* Outcome Standard */}
-      <Section title="Our Outcome Standard\">
+      <Section title="Our Outcome Standard">
         <div className="max-w-3xl">
           <p className="text-muted-foreground mb-6">Every engagement must produce at least one of:</p>
           <div className="grid md:grid-cols-2 gap-4">
@@ -164,7 +164,7 @@ export default function ServicesPage() {
       {/* Engagement Model */}
       <Section
         title="How We Work"
-        className="bg-muted/30\"
+        className="bg-muted/30"
       >
         <div className="grid md:grid-cols-4 gap-8 text-center">
           {[
