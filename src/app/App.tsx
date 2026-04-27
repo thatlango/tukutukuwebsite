@@ -3,11 +3,14 @@ import { Hero } from "./components/Hero";
 import { TrustSection } from "./components/TrustSection";
 import { WhatWeDo } from "./components/WhatWeDo";
 import { ImpactMetrics } from "./components/ImpactMetrics";
+import { HowWeBuildInnovation } from "./components/HowWeBuildInnovation";
+import { PipelineSection } from "./components/PipelineSection";
 import { ProgramsSpotlight } from "./components/ProgramsSpotlight";
 import { HackathonServices } from "./components/HackathonServices";
 import { InnovationAsAService } from "./components/InnovationAsAService";
 import { TechPlatforms } from "./components/TechPlatforms";
 import { WhyTukuTuku } from "./components/WhyTukuTuku";
+import { InvestorsHighlight } from "./components/InvestorsHighlight";
 import { Testimonials } from "./components/Testimonials";
 import { StoriesSection } from "./components/StoriesSection";
 import { PartnershipSection } from "./components/PartnershipSection";
@@ -27,6 +30,8 @@ export default function App() {
         <section id="about">
           <WhatWeDo />
         </section>
+        <HowWeBuildInnovation />
+        <PipelineSection />
         <ImpactMetrics />
         <section id="programs">
           <ProgramsSpotlight />
@@ -35,6 +40,7 @@ export default function App() {
         <InnovationAsAService />
         <TechPlatforms />
         <WhyTukuTuku />
+        <InvestorsHighlight />
         <Testimonials />
         <StoriesSection />
         <section id="consulting">

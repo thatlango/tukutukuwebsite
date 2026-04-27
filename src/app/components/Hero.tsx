@@ -41,7 +41,7 @@ export function Hero() {
             className="mb-4"
           >
             <span className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 text-accent text-sm sm:text-base uppercase tracking-wider font-semibold px-4 py-1.5 rounded-full">
-              African innovation hub rooted in Gulu, Uganda
+              Built in Northern Uganda • Engineered for East Africa
             </span>
           </motion.div>
 
@@ -51,9 +51,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Bold Ideas.{" "}
-              <span className="text-accent">Local Solutions.</span>{" "}
-              Lasting Impact.
+              We build the systems that{" "}
+              <span className="text-accent">power innovation</span>{" "}
+              across East Africa.
             </h1>
           </motion.div>
 
@@ -63,10 +63,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg sm:text-xl lg:text-2xl text-white/95 mb-8 leading-relaxed max-w-3xl"
           >
-            <strong>Tuku-Tuku Innovation Labs</strong> turns bold ideas into
-            real solutions, from startup acceleration to national innovation
-            programs, for entrepreneurs, communities, and organizations across
-            East Africa.
+            <strong>Tuku-Tuku Innovation Labs</strong> designs and deploys
+            scalable programs, platforms, and venture pipelines for startups,
+            institutions, and partners that need reliable implementation.
           </motion.p>
 
           {/* Trust Signals */}
@@ -76,7 +75,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="flex flex-wrap gap-4 mb-8"
           >
-            {["1,200+ Entrepreneurs supported", "45+ Programs delivered", "80+ Communities reached"].map((item) => (
+            {["1,200+ Entrepreneurs supported", "45+ Programs delivered", "500+ MSMEs tracked and supported"].map((item) => (
               <span key={item} className="flex items-center gap-1.5 text-white/85 text-sm">
                 <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
                 {item}
@@ -93,18 +92,18 @@ export function Hero() {
             <Button
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8 py-6 font-semibold shadow-lg"
-              onClick={() => scrollTo("programs")}
+              onClick={() => scrollTo("consulting")}
             >
-              Explore Our Programs
+              Work With Us
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="bg-white/10 text-white border-white/40 hover:bg-white/25 text-lg px-8 py-6 font-semibold"
-              onClick={() => scrollTo("consulting")}
+              onClick={() => scrollTo("about")}
             >
-              Partner With Us
+              View Case Studies
             </Button>
           </motion.div>
 
