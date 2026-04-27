@@ -20,154 +20,204 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-[95vh] flex items-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
-          alt="African innovators collaborating in a modern workspace"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/88 to-primary/65"></div>
-      </div>
-
-      {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24">
-        <div className="max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-4"
-          >
-            <span className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 text-accent text-sm sm:text-base uppercase tracking-wider font-semibold px-4 py-1.5 rounded-full">
+    <section className="relative overflow-hidden bg-[#f7fbf5]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(26,77,46,0.16),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(212,175,55,0.14),_transparent_40%)]"></div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative z-10">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mb-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-primary shadow-sm"
+            >
               Built in Northern Uganda • Engineered for East Africa
-            </span>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-          >
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              We build the systems that{" "}
-              <span className="text-accent">power innovation</span>{" "}
-              across East Africa.
-            </h1>
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg sm:text-xl lg:text-2xl text-white/95 mb-8 leading-relaxed max-w-3xl"
-          >
-            <strong>Tuku-Tuku Innovation Labs</strong> designs and deploys
-            scalable programs, platforms, and venture pipelines for startups,
-            institutions, and partners that need reliable implementation.
-          </motion.p>
-
-          {/* Trust Signals */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.25 }}
-            className="flex flex-wrap gap-4 mb-8"
-          >
-            {["1,200+ Entrepreneurs supported", "45+ Programs delivered", "500+ MSMEs tracked and supported"].map((item) => (
-              <span key={item} className="flex items-center gap-1.5 text-white/85 text-sm">
-                <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
-                {item}
-              </span>
-            ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 mb-10"
-          >
-            <Button
-              size="lg"
-              className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8 py-6 font-semibold shadow-lg"
-              onClick={() => scrollTo("contact")}
+            </motion.div>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-foreground"
             >
-              Work With Us
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white/10 text-white border-white/40 hover:bg-white/25 text-lg px-8 py-6 font-semibold"
-              onClick={() => scrollTo("case-studies")}
+              We build the systems that power innovation across East Africa.
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground"
             >
-              View Case Studies
-            </Button>
-          </motion.div>
+              Tuku-Tuku Innovation Labs designs and deploys scalable programs, platforms, and venture pipelines for startups, institutions, and partners that need reliable implementation.
+            </motion.p>
 
-          {/* Email capture */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.55 }}
-            className="max-w-md"
-          >
-            {!submitted ? (
-              <>
-                <p className="text-white/70 text-sm mb-3">
-                  Get updates on programs and opportunities:
-                </p>
-                <form onSubmit={handleEmailSubmit} className="flex gap-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.25 }}
+              className="mt-10 flex flex-wrap gap-3"
+            >
+              {[
+                "Program Design",
+                "Venture Building",
+                "Innovation Systems",
+                "Investment Readiness",
+                "Partner Delivery",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/20 bg-white/15 px-4 py-2 text-sm font-semibold text-white/90"
+                >
+                  {item}
+                </span>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="mt-10 grid gap-4 lg:grid-cols-3"
+            >
+              {[
+                {
+                  title: "Program Design",
+                  description: "Clear delivery frameworks, reporting systems, and partner-ready execution.",
+                  featured: false,
+                },
+                {
+                  title: "Venture Building",
+                  description: "Practical packages that convert ideas into investable ventures.",
+                  featured: true,
+                },
+                {
+                  title: "Investment Readiness",
+                  description: "Due-diligence-ready systems that make capital decisions easier.",
+                  featured: false,
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className={`rounded-[2rem] p-6 shadow-lg transition-all duration-300 ${item.featured ? "bg-accent text-primary border border-accent" : "bg-white border border-white/20 text-foreground"}`}
+                >
+                  <p className={`text-sm uppercase tracking-[0.24em] font-semibold ${item.featured ? "text-primary" : "text-muted-foreground"}`}>
+                    {item.featured ? "Featured" : "Featured Service"}
+                  </p>
+                  <h3 className={`mt-4 text-xl font-bold ${item.featured ? "text-primary" : "text-foreground"}`}>
+                    {item.title}
+                  </h3>
+                  <p className={`mt-3 text-sm leading-relaxed ${item.featured ? "text-primary/90" : "text-muted-foreground"}`}>
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.45 }}
+              className="mt-10 flex flex-col gap-4 sm:flex-row"
+            >
+              <Button
+                size="lg"
+                className="bg-primary text-white hover:bg-[#16432a] shadow-lg"
+                onClick={() => scrollTo("contact")}
+              >
+                Work With Us
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:bg-white"
+                onClick={() => scrollTo("programs")}
+              >
+                Access Programs
+              </Button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="mt-12 grid gap-3 sm:grid-cols-3"
+            >
+              {[
+                { label: "Programs designed", value: "12+" },
+                { label: "Partner cohorts", value: "45+" },
+                { label: "Entrepreneurs reached", value: "1,200+" },
+              ].map((item) => (
+                <div key={item.label} className="rounded-3xl border border-border bg-white/80 p-5 shadow-sm">
+                  <p className="text-3xl font-bold text-primary">{item.value}</p>
+                  <p className="mt-2 text-sm text-muted-foreground">{item.label}</p>
+                </div>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.65 }}
+              className="mt-12 max-w-xl"
+            >
+              {!submitted ? (
+                <form onSubmit={handleEmailSubmit} className="grid gap-3 sm:grid-cols-[1fr_auto]">
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
                     required
-                    className="flex-1 px-4 py-3 rounded-lg bg-white/15 border border-white/30 text-white placeholder-white/50 text-sm focus:outline-none focus:border-accent focus:bg-white/20 transition-all"
+                    className="rounded-2xl border border-border bg-white px-4 py-4 text-sm text-foreground shadow-sm focus:outline-none focus:border-primary"
                   />
                   <Button
                     type="submit"
-                    className="bg-accent text-accent-foreground hover:bg-accent/90 px-5 py-3 text-sm font-semibold"
+                    className="rounded-2xl bg-accent text-primary hover:bg-[#b89026] px-6 py-4 text-sm font-semibold"
                   >
                     Subscribe
                   </Button>
                 </form>
-              </>
-            ) : (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="flex items-center gap-3 bg-accent/20 border border-accent/40 rounded-lg px-4 py-3"
-              >
-                <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                <span className="text-white text-sm font-medium">
+              ) : (
+                <div className="rounded-2xl border border-accent bg-accent/10 px-5 py-4 text-sm text-primary">
                   You're in! We'll be in touch with updates.
-                </span>
-              </motion.div>
-            )}
+                </div>
+              )}
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative mx-auto w-full max-w-xl"
+          >
+            <div className="rounded-[2rem] border border-border bg-white p-5 shadow-xl">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="overflow-hidden rounded-[1.5rem] bg-slate-200">
+                  <img
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80"
+                    alt="Innovation team workshop"
+                    className="h-64 w-full object-cover"
+                  />
+                </div>
+                <div className="space-y-4">
+                  <div className="rounded-[1.5rem] bg-primary text-white p-5">
+                    <p className="text-sm uppercase tracking-[0.24em] font-semibold text-white/80">Infrastructure-focused programs</p>
+                    <p className="mt-3 text-lg font-bold">Systems, pipelines, and local delivery</p>
+                  </div>
+                  <div className="rounded-[1.5rem] bg-slate-100 p-5 text-sm text-foreground">
+                    Built for investors, institutions, founders and partners who need execution certainty.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="pointer-events-none absolute -bottom-6 left-8 hidden rounded-full border border-white bg-white/90 px-4 py-3 shadow-xl md:block">
+              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Pipeline focus</p>
+              <p className="mt-1 text-sm font-semibold text-primary">Source → Train → Validate → Build → Prepare → Connect</p>
+            </div>
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 cursor-pointer"
-        onClick={() => scrollTo("about")}
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2"
-        >
-          <div className="w-1 h-2 bg-white/70 rounded-full"></div>
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

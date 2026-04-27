@@ -11,14 +11,22 @@ export default function InnovationPage() {
         title="What innovation means here"
         description="For Tuku-Tuku, innovation means building practical systems that keep producing outcomes long after a project ends."
       >
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2 gap-5 mb-12">
           <article className="rounded-2xl border border-border bg-card p-6">
-            <h3 className="text-lg font-bold text-primary mb-2">Why imported models fail</h3>
-            <p className="text-sm text-muted-foreground">Many imported approaches ignore local infrastructure, institutional constraints, and execution realities. We design with context from day one.</p>
+            <h3 className="text-lg font-bold text-primary mb-2">Innovation as Systems Design</h3>
+            <p className="text-sm text-muted-foreground">We treat innovation as infrastructure: repeatable processes, scalable platforms, and sustainable models that outlast individual projects.</p>
           </article>
           <article className="rounded-2xl border border-border bg-card p-6">
-            <h3 className="text-lg font-bold text-primary mb-2">What we build</h3>
-            <p className="text-sm text-muted-foreground">Training systems, digital platforms, venture pipelines, and ecosystem infrastructure used by real operators.</p>
+            <h3 className="text-lg font-bold text-primary mb-2">Importance of Local Infrastructure</h3>
+            <p className="text-sm text-muted-foreground">Without strong local systems, imported models fail. We build the foundational infrastructure that enables sustainable innovation ecosystems.</p>
+          </article>
+          <article className="rounded-2xl border border-border bg-card p-6">
+            <h3 className="text-lg font-bold text-primary mb-2">The Tuku-Tuku Model</h3>
+            <p className="text-sm text-muted-foreground">Source, train, validate, build, prepare, connect. Our 6-stage pipeline transforms raw potential into investment-ready ventures.</p>
+          </article>
+          <article className="rounded-2xl border border-border bg-card p-6">
+            <h3 className="text-lg font-bold text-primary mb-2">Ecosystem Transformation Vision</h3>
+            <p className="text-sm text-muted-foreground">Become a regional innovation infrastructure platform connecting talent, institutions, and capital across East Africa and beyond.</p>
           </article>
         </div>
       </Section>

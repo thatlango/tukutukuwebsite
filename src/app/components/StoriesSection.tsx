@@ -52,10 +52,10 @@ export function StoriesSection() {
           className="text-center mb-16"
         >
           <span className="text-sm uppercase tracking-widest text-primary font-semibold">
-            Latest Blog & Articles
+            Latest News
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-4">
-            Latest Blog & Articles
+            What's Happening at Tuku-Tuku
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Stories, programs, and insights from across Uganda and East Africa.

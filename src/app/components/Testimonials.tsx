@@ -46,10 +46,10 @@ export function Testimonials() {
           className="text-center mb-16"
         >
           <span className="text-sm uppercase tracking-widest text-accent font-semibold">
-            What Our Clients Saying
+            What People Say
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-2 mb-4">
-            What Our Clients Saying
+            Real Stories. Real Impact.
           </h2>
           <p className="text-lg text-white/75 max-w-2xl mx-auto">
             From first-time founders to international development organizations, here's what they say about working with Tuku-Tuku.

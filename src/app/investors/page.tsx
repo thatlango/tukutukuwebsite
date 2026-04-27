@@ -11,14 +11,30 @@ export default function InvestorsPage() {
         title="Access curated, investment-ready opportunities"
         description="We reduce early-stage risk by sourcing, training, validating, and preparing ventures before investor engagement."
       >
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-3 gap-5 mb-12">
           <article className="rounded-2xl border border-border bg-card p-6">
-            <h3 className="text-lg font-bold text-primary mb-2">The problem</h3>
-            <p className="text-sm text-muted-foreground">Fragmented ecosystems and unvalidated startups make early-stage discovery expensive and risky.</p>
+            <h3 className="text-lg font-bold text-primary mb-2">The Problem</h3>
+            <ul className="text-sm text-muted-foreground space-y-2">
+              <li>• Fragmented ecosystem</li>
+              <li>• High investment risk</li>
+              <li>• Lack of structured deal flow</li>
+            </ul>
           </article>
           <article className="rounded-2xl border border-border bg-card p-6">
-            <h3 className="text-lg font-bold text-primary mb-2">Our solution</h3>
-            <p className="text-sm text-muted-foreground">Pre-filtered pipeline, venture readiness systems, and local execution support before and after funding.</p>
+            <h3 className="text-lg font-bold text-primary mb-2">Our Solution</h3>
+            <ul className="text-sm text-muted-foreground space-y-2">
+              <li>• Vetted pipeline</li>
+              <li>• Trained founders</li>
+              <li>• Validated ventures</li>
+            </ul>
+          </article>
+          <article className="rounded-2xl border border-border bg-card p-6">
+            <h3 className="text-lg font-bold text-primary mb-2">Investor Value</h3>
+            <ul className="text-sm text-muted-foreground space-y-2">
+              <li>• Reduced due diligence burden</li>
+              <li>• Local execution partner</li>
+              <li>• Continuous venture monitoring</li>
+            </ul>
           </article>
         </div>
       </Section>
@@ -28,9 +44,9 @@ export default function InvestorsPage() {
         <CTA
           title="Reduce due diligence burden with a trusted local pipeline partner"
           description="Work with us to access vetted opportunities and reliable implementation support."
-          primaryLabel="Access Pipeline"
+          primaryLabel="Partner With Us"
           primaryTarget="/contact"
-          secondaryLabel="Fund a Program"
+          secondaryLabel="Access Pipeline"
           secondaryTarget="/contact"
         />
       </div>
