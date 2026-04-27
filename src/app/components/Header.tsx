@@ -16,10 +16,12 @@ export function Header() {
   const navItems = [
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Case Studies", href: "#case-studies" },
     { label: "Programs", href: "#programs" },
-    { label: "Services", href: "#hackathons" },
-    { label: "Platforms", href: "#platforms" },
-    { label: "Consulting", href: "#consulting" },
+    { label: "Innovation", href: "#innovation" },
+    { label: "Pipeline", href: "#pipeline" },
+    { label: "Investors", href: "#investors" },
     { label: "Contact", href: "#contact" },
   ];
 
