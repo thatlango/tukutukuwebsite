@@ -1,44 +1,26 @@
 import { Hero } from "./components/Hero";
 import { TrustSection } from "./components/TrustSection";
-import { UserSegmentation } from "./components/UserSegmentation";
-import { Pipeline } from "./components/Pipeline";
 import { ServicesOverview } from "./components/ServicesOverview";
-import { WhyChooseUs } from "./components/WhyChooseUs";
+import { Pipeline } from "./components/Pipeline";
 import { CaseStudiesSection } from "./components/CaseStudiesSection";
-import { ProgramsProductsSection } from "./components/ProgramsProductsSection";
-import { HowWeBuildInnovation } from "./components/HowWeBuildInnovation";
-import { PipelineSection } from "./components/PipelineSection";
-import { ImpactMetrics } from "./components/ImpactMetrics";
-import { AboutSection } from "./components/AboutSection";
-import { InvestorsHighlight } from "./components/InvestorsHighlight";
 import { CTA } from "./components/CTA";
 
 export default function HomePage() {
   return (
     <main>
-      <section id="home">
-        <Hero />
-      </section>
+      <Hero />
       <TrustSection />
-      <AboutSection />
       <ServicesOverview />
-      <WhyChooseUs />
       <Pipeline />
-      <UserSegmentation />
       <CaseStudiesSection />
-      <ProgramsProductsSection />
-      <HowWeBuildInnovation />
-      <PipelineSection />
-      <InvestorsHighlight />
-      <ImpactMetrics />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <CTA
-          title="Need a trusted execution partner for East Africa?"
-          description="From discovery to delivery, we help institutions and partners run high-quality programs and systems with measurable outcomes."
-          primaryLabel="Work With Us"
+          title="Ready to transform your innovation pipeline?"
+          description="Partner with us to build scalable solutions that drive real impact across East Africa."
+          primaryLabel="Partner With Us"
           primaryTarget="/contact"
-          secondaryLabel="Partner"
-          secondaryTarget="/contact"
+          secondaryLabel="Explore Our Work"
+          secondaryTarget="/case-studies"
         />
       </div>
     </main>

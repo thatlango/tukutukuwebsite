@@ -37,7 +37,7 @@ export function Navbar() {
             </NavLink>
           ))}
           <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-            <Link to="/contact">Work With Us</Link>
+            <Link to="/contact">Partner With Us</Link>
           </Button>
         </nav>
 
@@ -60,7 +60,7 @@ export function Navbar() {
               </NavLink>
             ))}
             <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-              <Link to="/contact" onClick={() => setOpen(false)}>Work With Us</Link>
+              <Link to="/contact" onClick={() => setOpen(false)}>Partner With Us</Link>
             </Button>
           </div>
         </nav>
