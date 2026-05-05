@@ -25,7 +25,7 @@ const heroImages = [
 
 export function Hero() {
   return (
-    <section className="bg-white py-16 lg:py-24 overflow-hidden">
+    <section className="bg-white pt-0 pb-16 lg:pb-24 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
