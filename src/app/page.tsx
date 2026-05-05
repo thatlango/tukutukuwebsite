@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Hero } from "./components/Hero";
 import { MarqueeTicker } from "./components/MarqueeTicker";
+import { PartnersSection } from "./components/PartnersSection";
 import { Pipeline } from "./components/Pipeline";
 import { CaseStudiesSection } from "./components/CaseStudiesSection";
 import { ArrowRight, CheckCircle, Users, Zap, TrendingUp, Users2, BarChart3, Lightbulb, Monitor } from "lucide-react";
@@ -429,6 +430,7 @@ export default function HomePage() {
     <main>
       <Hero />
       <MarqueeTicker />
+      <PartnersSection />
       <AboutSection />
       <ServicesSection />
       <WhyUsSection />
