@@ -1,107 +1,84 @@
 import { motion } from "motion/react";
-import { ArrowRight } from "lucide-react";
+import { Search, GraduationCap, FlaskConical, Hammer, TrendingUp, Link2 } from "lucide-react";
 
-const pipelineStages = [
+const stages = [
   {
-    stage: "Source",
-    description: "Identify entrepreneurs and opportunities locally",
-    icon: "🔍",
+    icon: Search,
+    stage: "01 · Source",
+    description: "Identify entrepreneurs and opportunities within communities across the region.",
   },
   {
-    stage: "Train",
-    description: "Structured capacity building programs",
-    icon: "🎓",
+    icon: GraduationCap,
+    stage: "02 · Train",
+    description: "Structured capacity-building programs that give founders real skills and tools.",
   },
   {
-    stage: "Validate",
-    description: "Market testing and real-world validation",
-    icon: "✅",
+    icon: FlaskConical,
+    stage: "03 · Validate",
+    description: "Market testing and real-world validation to confirm product-market fit.",
   },
   {
-    stage: "Build",
-    description: "Product and operational development support",
-    icon: "⚙️",
+    icon: Hammer,
+    stage: "04 · Build",
+    description: "Product and operational development support to get ventures production-ready.",
   },
   {
-    stage: "Prepare",
-    description: "Investment-readiness systems",
-    icon: "📈",
+    icon: TrendingUp,
+    stage: "05 · Prepare",
+    description: "Investment-readiness systems: financials, pitch, documentation, and governance.",
   },
   {
-    stage: "Connect",
-    description: "Link ventures to investors and partners",
-    icon: "🤝",
+    icon: Link2,
+    stage: "06 · Connect",
+    description: "Link ventures to investors, partners, and markets that fuel their growth.",
   },
 ];
 
 export function Pipeline() {
   return (
-    <section className="py-20 lg:py-32 bg-muted/20">
+    <section className="py-20 lg:py-28 bg-muted">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <span className="text-sm uppercase tracking-widest text-primary font-semibold">
-            Our Process
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-4">
-            The Tuku-Tuku Pipeline Model
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <p className="text-primary text-xs uppercase tracking-[0.2em] font-bold mb-3">Our Process</p>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-4">
+            How the Pipeline Works
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-gray-500 text-lg">
             We don't just support startups — we build pipelines that consistently produce investable ventures.
           </p>
-        </motion.div>
-
-        <div className="relative">
-          {/* Pipeline Flow */}
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-2">
-            {pipelineStages.map((stage, index) => (
-              <motion.div
-                key={stage.stage}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <div className="bg-card border border-border rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 group">
-                  <div className="text-3xl mb-3">{stage.icon}</div>
-                  <h3 className="text-lg font-bold text-primary mb-2">{stage.stage}</h3>
-                  <p className="text-sm text-muted-foreground">{stage.description}</p>
-                </div>
-                {/* Arrow for desktop */}
-                {index < pipelineStages.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2 z-10">
-                    <ArrowRight className="h-6 w-6 text-primary" />
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Mobile arrows */}
-          <div className="md:hidden flex justify-center mt-8 space-x-4">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <ArrowRight key={i} className="h-5 w-5 text-primary" />
-            ))}
-          </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            This systematic approach reduces investment risk and increases execution certainty for our partners.
-          </p>
-        </motion.div>
+        {/* Steps grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {stages.map((s, i) => {
+            const Icon = s.icon;
+            return (
+              <motion.div
+                key={s.stage}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.07 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-2xl p-6 border border-gray-100 hover-lift group"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors duration-300">
+                    <Icon className="h-5 w-5 text-primary group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-primary font-bold uppercase tracking-wider mb-1">{s.stage}</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">{s.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        <p className="text-center text-sm text-gray-400 mt-10 font-medium">
+          This systematic approach reduces investment risk and increases execution certainty for our partners.
+        </p>
       </div>
     </section>
   );

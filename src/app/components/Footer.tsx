@@ -1,108 +1,85 @@
-import { motion } from "motion/react";
-import { MapPin, Mail, Phone, Linkedin, Facebook, MessageCircle, CheckCircle } from "lucide-react";
-import { useState } from "react";
-import { Button } from "./ui/button";
+import { MapPin, Mail, Phone, Linkedin, Facebook, MessageCircle } from "lucide-react";
 import { Link } from "react-router";
+import { useState } from "react";
+
+const quickLinks = [
+  { label: "About Us", to: "/about" },
+  { label: "Services", to: "/services" },
+  { label: "Programs", to: "/programs" },
+  { label: "Case Studies", to: "/case-studies" },
+  { label: "Innovation", to: "/innovation" },
+  { label: "Investors", to: "/investors" },
+  { label: "Insights", to: "/insights" },
+  { label: "Contact", to: "/contact" },
+];
+
+const whatsappUrl =
+  "https://wa.me/256792131316?text=Hi%20Tuku-Tuku%2C%20I'd%20like%20to%20learn%20more%20about%20your%20programs.";
+
+const socials = [
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/tuku-tuku-innovation-labs" },
+  { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/tukutukuinnovationlabs" },
+  { icon: MessageCircle, label: "WhatsApp", href: whatsappUrl },
+];
 
 export function Footer() {
-  const [newsletterEmail, setNewsletterEmail] = useState("");
-  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
-
-  const handleNewsletter = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (newsletterEmail) {
-      setNewsletterSubmitted(true);
-    }
-  };
-
-  const whatsappUrl = "https://wa.me/256792131316?text=Hi%20Tuku-Tuku%2C%20I'd%20like%20to%20learn%20more%20about%20your%20programs.";
-
-  const socialLinks = [
-    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/tuku-tuku-innovation-labs" },
-    { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/tukutukuinnovationlabs" },
-    { icon: MessageCircle, label: "WhatsApp", href: whatsappUrl },
-  ];
-
-  const quickLinks = [
-    { label: "About Us", to: "/about" },
-    { label: "Services", to: "/services" },
-    { label: "Case Studies", to: "/case-studies" },
-    { label: "Programs", to: "/programs" },
-    { label: "Innovation", to: "/innovation" },
-    { label: "Investors", to: "/investors" },
-    { label: "Contact", to: "/contact" },
-    { label: "About Us", id: "about" },
-    { label: "Services", id: "services" },
-    { label: "Case Studies", id: "case-studies" },
-    { label: "Programs", id: "programs" },
-    { label: "Innovation", id: "innovation" },
-    { label: "Investors", id: "investors" },
-    { label: "Contact", id: "contact" },
-  ];
+  const [email, setEmail] = useState("");
+  const [done, setDone] = useState(false);
 
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white py-20 overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 pointer-events-none opacity-10">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
-      </div>
+    <footer className="bg-[#0f2419] text-white">
+      {/* Main footer grid */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-primary text-white flex items-center justify-center font-bold text-base flex-shrink-0 shadow-lg">
-                TT
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-black text-sm">TT</span>
               </div>
-              <span className="font-black text-lg leading-tight">
-                Tuku-Tuku<br />Innovation Labs
-              </span>
+              <div>
+                <p className="font-black text-sm text-white leading-none">Tuku-Tuku</p>
+                <p className="text-xs text-white/50 mt-0.5">Innovation Labs</p>
+              </div>
             </div>
-            <p className="text-white/70 leading-relaxed mb-8 text-sm">
+            <p className="text-white/55 text-sm leading-relaxed mb-6">
               Innovation grows where communities believe in their own ideas.
               Supporting entrepreneurs across East Africa since 2016.
             </p>
-            {/* Social links */}
-            <div className="flex gap-3">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
+            <div className="flex gap-2">
+              {socials.map((s) => {
+                const Icon = s.icon;
                 return (
-                  <motion.a
-                    key={social.label}
-                    href={social.href}
+                  <a
+                    key={s.label}
+                    href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.15, rotate: 5 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-12 h-12 rounded-full bg-gradient-primary hover:shadow-lg flex items-center justify-center transition-all duration-300 hover-lift"
-                    aria-label={social.label}
+                    aria-label={s.label}
+                    className="w-9 h-9 rounded-lg bg-white/8 hover:bg-primary flex items-center justify-center transition-colors duration-200"
                   >
-                    <Icon className="h-5 w-5 text-white" />
-                  </motion.a>
+                    <Icon className="h-4 w-4 text-white" />
+                  </a>
                 );
               })}
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick links */}
           <div>
-            <h4 className="text-base font-black mb-6 text-white flex items-center gap-2">
-              <div className="h-1 w-6 bg-gradient-secondary rounded-full"></div>
+            <h4 className="text-sm font-black text-white mb-5 uppercase tracking-wider">
               Quick Links
             </h4>
-            <ul className="space-y-3">
-              {quickLinks.slice(0, 7).map((link) => (
-                <li key={link.label}>
-                  {link.to ? (
-                    <Link
-                      to={link.to}
-                      className="text-white/70 hover:text-secondary text-sm font-medium transition-all duration-300 hover:translate-x-1 inline-block"
-                    >
-                      {link.label}
-                    </Link>
-                  ) : null}
+            <ul className="space-y-2.5">
+              {quickLinks.map((l) => (
+                <li key={l.label}>
+                  <Link
+                    to={l.to}
+                    className="text-white/55 hover:text-accent text-sm font-medium transition-colors duration-200"
+                  >
+                    {l.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -110,79 +87,73 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-base font-black mb-6 text-white flex items-center gap-2">
-              <div className="h-1 w-6 bg-gradient-accent rounded-full"></div>
+            <h4 className="text-sm font-black text-white mb-5 uppercase tracking-wider">
               Contact
             </h4>
-            <div className="space-y-4 text-white/70 text-sm">
-              <div className="flex items-start gap-3 hover:text-accent transition-colors duration-300 group">
-                <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-secondary group-hover:text-accent transition-colors" />
-                <span className="leading-relaxed">Gulu, Uganda<br />East Africa</span>
+            <div className="space-y-3 text-sm text-white/55">
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 mt-0.5 text-accent flex-shrink-0" />
+                <span>Gulu, Uganda · East Africa</span>
               </div>
-              <a href="mailto:info@tukutuku.org" className="flex items-center gap-3 hover:text-accent transition-colors duration-300 group">
-                <Mail className="h-5 w-5 flex-shrink-0 text-secondary group-hover:text-accent transition-colors" />
-                <span className="font-medium">info@tukutuku.org</span>
+              <a href="mailto:info@tukutuku.org" className="flex items-center gap-3 hover:text-accent transition-colors">
+                <Mail className="h-4 w-4 text-accent flex-shrink-0" />
+                info@tukutuku.org
               </a>
-              <a href="tel:+256792131316" className="flex items-center gap-3 hover:text-accent transition-colors duration-300 group">
-                <Phone className="h-5 w-5 flex-shrink-0 text-secondary group-hover:text-accent transition-colors" />
-                <span className="font-medium">+256 792131316</span>
+              <a href="tel:+256792131316" className="flex items-center gap-3 hover:text-accent transition-colors">
+                <Phone className="h-4 w-4 text-accent flex-shrink-0" />
+                +256 792 131 316
               </a>
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-accent transition-colors duration-300 group">
-                <MessageCircle className="h-5 w-5 flex-shrink-0 text-secondary group-hover:text-accent transition-colors" />
-                <span className="font-medium">WhatsApp us</span>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-accent transition-colors">
+                <MessageCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                WhatsApp Us
               </a>
             </div>
           </div>
 
           {/* Newsletter */}
           <div>
-            <h4 className="text-base font-black mb-6 text-white flex items-center gap-2">
-              <div className="h-1 w-6 bg-gradient-primary rounded-full"></div>
+            <h4 className="text-sm font-black text-white mb-5 uppercase tracking-wider">
               Stay Updated
             </h4>
-            <p className="text-white/60 text-sm mb-4 font-medium">
-              Get insights delivered to your inbox.
+            <p className="text-white/55 text-sm mb-4">
+              Get insights and program updates delivered to your inbox.
             </p>
-            {!newsletterSubmitted ? (
-              <form onSubmit={handleNewsletter} className="space-y-3">
+            {done ? (
+              <div className="bg-primary/40 border border-accent/30 rounded-lg px-4 py-3 text-sm text-accent font-semibold">
+                You're subscribed!
+              </div>
+            ) : (
+              <form
+                onSubmit={(e) => { e.preventDefault(); if (email) setDone(true); }}
+                className="flex flex-col gap-2"
+              >
                 <input
                   type="email"
-                  value={newsletterEmail}
-                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="your@email.com"
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm font-medium focus:outline-none focus:border-secondary focus:bg-white/15 transition-all duration-300 hover:bg-white/15"
+                  className="w-full px-4 py-2.5 rounded-lg bg-white/8 border border-white/15 text-white text-sm placeholder-white/40 focus:outline-none focus:border-accent transition-colors"
                 />
-                <Button
+                <button
                   type="submit"
-                  className="w-full bg-gradient-secondary text-white hover:shadow-lg font-bold py-3 rounded-lg hover-lift text-sm"
+                  className="bg-accent text-accent-foreground font-bold text-sm py-2.5 rounded-lg hover:opacity-90 transition-opacity"
                 >
                   Subscribe
-                </Button>
+                </button>
               </form>
-            ) : (
-              <div className="flex items-center gap-3 bg-gradient-accent/20 border border-accent/40 rounded-lg px-4 py-3">
-                <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                <span className="text-sm font-medium text-white/90">You're subscribed!</span>
-              </div>
             )}
           </div>
         </div>
+      </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-white/50 text-sm font-medium">
-            <p>
-              © 2026 Tuku-Tuku Innovation Labs. All rights reserved.
-            </p>
-            <div className="flex gap-6">
-              <a href="#" className="hover:text-white transition-colors duration-300">
-                Privacy Policy
-              </a>
-              <a href="#" className="hover:text-white transition-colors duration-300">
-                Terms of Service
-              </a>
-            </div>
+      {/* Bottom bar */}
+      <div className="border-t border-white/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-white/40 font-medium">
+          <p>© 2026 Tuku-Tuku Innovation Labs. All rights reserved.</p>
+          <div className="flex gap-5">
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

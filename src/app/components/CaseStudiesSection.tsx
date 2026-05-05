@@ -1,52 +1,93 @@
-import { Section } from "./Section";
+import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router";
 
 const studies = [
   {
+    tag: "University Ventures",
     name: "University Venture Labs Rollout",
     problem: "Universities had entrepreneurship clubs but no consistent venture pipeline system.",
-    intervention:
-      "Designed and deployed a structured campus-to-market venture lab model with facilitator training and tracking tools.",
-    results: "3 universities adopted the model; 210 ventures progressed through validation; 48 reached investment readiness.",
-    stage: "Pipeline stage reached: Validate → Build → Prepare",
+    results: "3 universities adopted the model; 210 ventures progressed; 48 reached investment readiness.",
+    stage: "Validate → Build → Prepare",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80",
   },
   {
-    name: "MSME Accelerator for Post-Conflict Districts",
-    problem: "MSMEs lacked operational systems and market linkage support.",
-    intervention:
-      "Implemented cohort-based training, mentor pairing, and light-touch operational diagnostics with field support.",
-    results: "160 MSMEs supported; 72% reported revenue growth within 6 months; 35 formal supplier contracts secured.",
-    stage: "Pipeline stage reached: Train → Validate → Build",
+    tag: "MSME Accelerator",
+    name: "Post-Conflict MSME Accelerator",
+    problem: "MSMEs lacked operational systems and market linkage support in post-conflict districts.",
+    results: "160 MSMEs supported; 72% reported revenue growth within 6 months; 35 supplier contracts secured.",
+    stage: "Train → Validate → Build",
+    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600&q=80",
   },
   {
+    tag: "Digital Platform",
     name: "Partner Delivery Platform",
     problem: "Multi-partner programs struggled with fragmented reporting and low execution visibility.",
-    intervention:
-      "Built a digital implementation dashboard for cohort tracking, milestone monitoring, and partner reporting.",
-    results: "500+ ventures tracked; reporting cycle time reduced by 40%; partner decision-making turnaround improved.",
-    stage: "Pipeline stage reached: Build → Prepare → Connect",
+    results: "500+ ventures tracked; reporting cycle time reduced 40%; partner turnaround improved.",
+    stage: "Build → Prepare → Connect",
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80",
   },
 ];
 
 export function CaseStudiesSection() {
   return (
-    <Section
-      id="case-studies"
-      eyebrow="Case Studies"
-      title="Proof over promises"
-      description="Each case shows the same structure: the problem, our intervention, and measurable results."
-      className="bg-muted/30"
-    >
-      <div className="grid lg:grid-cols-3 gap-5">
-        {studies.map((study) => (
-          <article key={study.name} className="rounded-2xl border border-border bg-card p-6">
-            <h3 className="text-xl font-bold text-primary mb-3">{study.name}</h3>
-            <p className="text-sm mb-2"><span className="font-semibold">Problem:</span> {study.problem}</p>
-            <p className="text-sm mb-2"><span className="font-semibold">Intervention:</span> {study.intervention}</p>
-            <p className="text-sm mb-3 text-muted-foreground"><span className="font-semibold text-foreground">Results:</span> {study.results}</p>
-            <p className="text-xs uppercase tracking-wider text-primary font-semibold">{study.stage}</p>
-          </article>
-        ))}
+    <section id="case-studies" className="py-20 lg:py-28 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header row */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
+          <div>
+            <p className="text-primary text-xs uppercase tracking-[0.2em] font-bold mb-3">Case Studies</p>
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+              Proof Over Promises
+            </h2>
+          </div>
+          <Link
+            to="/case-studies"
+            className="inline-flex items-center gap-2 text-primary font-semibold text-sm border border-primary/30 px-5 py-2.5 rounded-lg hover:bg-primary hover:text-white transition-colors flex-shrink-0"
+          >
+            All Case Studies <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-5">
+          {studies.map((study, i) => (
+            <motion.article
+              key={study.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="rounded-2xl border border-gray-100 overflow-hidden hover-lift bg-white group"
+            >
+              <div className="h-44 overflow-hidden">
+                <img
+                  src={study.image}
+                  alt={study.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <span className="inline-block bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4">
+                  {study.tag}
+                </span>
+                <h3 className="font-black text-gray-900 text-lg mb-3">{study.name}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed mb-3">
+                  <span className="font-semibold text-gray-700">Challenge: </span>
+                  {study.problem}
+                </p>
+                <p className="text-sm text-gray-500 leading-relaxed mb-4">
+                  <span className="font-semibold text-gray-700">Results: </span>
+                  {study.results}
+                </p>
+                <div className="flex items-center gap-2 pt-4 border-t border-gray-100">
+                  <span className="text-xs text-primary font-bold uppercase tracking-wider">{study.stage}</span>
+                </div>
+              </div>
+            </motion.article>
+          ))}
+        </div>
       </div>
-    </Section>
+    </section>
   );
 }
