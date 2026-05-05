@@ -1,145 +1,164 @@
 import { motion } from "motion/react";
-import { Button } from "./ui/button";
-import { ArrowRight, CheckCircle } from "lucide-react";
-import { useState } from "react";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router";
+
+const heroImages = [
+  {
+    src: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=600&q=80",
+    alt: "Entrepreneurs in a workshop session",
+    label: "Entrepreneurs",
+    className: "col-span-1 row-span-2 h-full min-h-[280px]",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80",
+    alt: "Team collaboration meeting",
+    label: "Innovation",
+    className: "col-span-1 h-[150px]",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80",
+    alt: "Community members collaborating",
+    label: "Community",
+    className: "col-span-1 h-[150px]",
+  },
+];
 
 export function Hero() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const handleEmailSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubmitted(true);
-    }
-  };
-
   return (
-    <section className="relative overflow-hidden bg-gradient-hero min-h-screen flex items-center">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-primary rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-gradient-secondary rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-gradient-accent rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '4s' }}></div>
-      </div>
+    <section className="bg-white py-16 lg:py-24 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative z-10">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="max-w-2xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full glass-effect px-6 py-3 text-sm font-semibold text-white shadow-lg hover-glow"
-            >
-              <div className="w-2 h-2 bg-accent rounded-full animate-pulse-slow"></div>
-              Built in Northern Uganda • Engineered for East Africa
-            </motion.div>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-white mb-6"
-            >
-              We build the <span className="text-gradient">systems</span> that power innovation across East Africa.
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="mt-6 max-w-2xl text-xl leading-8 text-gray-200 mb-8"
-            >
-              Tuku-Tuku Innovation Labs designs and deploys scalable programs, platforms, and venture pipelines for startups, institutions, and partners that need reliable implementation.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.25 }}
-              className="mt-10 flex flex-wrap gap-3"
-            >
-              {[
-                "Program Design",
-                "Venture Building",
-                "Innovation Systems",
-                "Investment Readiness",
-                "Partner Delivery",
-              ].map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full glass-effect px-4 py-2 text-sm font-semibold text-white hover-glow hover-scale cursor-pointer transition-all"
-                >
-                  {item}
-                </span>
-              ))}
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="mt-10 flex flex-col sm:flex-row gap-4"
-            >
-              <Button
-                size="lg"
-                className="bg-gradient-primary hover-lift text-white font-semibold px-8 py-4 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
-                onClick={() => scrollTo("contact")}
-              >
-                Partner With Us
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="glass-effect border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg rounded-full hover-scale transition-all duration-300"
-                onClick={() => scrollTo("services")}
-              >
-                Explore Our Work
-              </Button>
-            </motion.div>
-          </div>
-
+          {/* Left — Content */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            {/* Eyebrow badge */}
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 text-sm font-semibold mb-6">
+              <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+              African Innovation Hub · Gulu, Uganda
+            </div>
+
+            <h1 className="text-5xl sm:text-6xl lg:text-[68px] font-black text-gray-900 leading-[1.05] mb-6">
+              Empowering<br />
+              <span className="text-primary">Bold Ideas.</span><br />
+              Lasting Impact.
+            </h1>
+
+            <p className="text-lg text-gray-500 leading-relaxed mb-8 max-w-[480px]">
+              We design and implement innovation systems that build ventures,
+              strengthen institutions, and unlock economic opportunity across East Africa.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link
+                to="/programs"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold px-7 py-3.5 rounded-lg hover:bg-primary-light transition-colors duration-200 text-base"
+              >
+                Explore Programs
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center justify-center gap-2 border-2 border-gray-200 text-gray-700 font-bold px-7 py-3.5 rounded-lg hover:border-primary hover:text-primary transition-colors duration-200 text-base"
+              >
+                View Our Work
+              </Link>
+            </div>
+
+            {/* Micro stats */}
+            <div className="mt-10 flex items-center gap-8 pt-10 border-t border-gray-100">
+              {[
+                { value: "1,200+", label: "Entrepreneurs" },
+                { value: "50+", label: "Programs" },
+                { value: "80+", label: "Communities" },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <p className="text-2xl font-black text-gray-900">{stat.value}</p>
+                  <p className="text-xs text-gray-500 font-medium mt-0.5">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Right — Photo collage */}
+          <motion.div
+            initial={{ opacity: 0, x: 32 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.7, delay: 0.15 }}
             className="relative"
           >
-            <div className="relative">
-              <div className="aspect-square w-full max-w-md rounded-3xl glass-effect p-8 hover-lift">
-                <div className="flex h-full flex-col items-center justify-center text-center">
-                  <div className="mb-6 w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center animate-float">
-                    <CheckCircle className="h-12 w-12 text-white" />
+            {/* Decorative badge */}
+            <div className="absolute -top-4 -left-4 z-20 bg-accent text-accent-foreground font-black text-xs px-3 py-1.5 rounded-full shadow-md">
+              Est. 2016 · Gulu, Uganda
+            </div>
+
+            <div className="grid grid-cols-2 gap-3 h-[480px]">
+              {/* Tall image left */}
+              <motion.div
+                className="relative rounded-2xl overflow-hidden h-full"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  src={heroImages[0].src}
+                  alt={heroImages[0].alt}
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
+                <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1.5">
+                  <p className="text-xs font-bold text-primary">{heroImages[0].label}</p>
+                </div>
+              </motion.div>
+
+              {/* Right column — two stacked images */}
+              <div className="flex flex-col gap-3 h-full">
+                <motion.div
+                  className="relative rounded-2xl overflow-hidden flex-1"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src={heroImages[1].src}
+                    alt={heroImages[1].alt}
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                  />
+                  <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1.5">
+                    <p className="text-xs font-bold text-primary">{heroImages[1].label}</p>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Ready to Build Systems?</h3>
-                  <p className="text-gray-200 mb-6">
-                    Join partners who trust us to deliver measurable innovation outcomes.
-                  </p>
-                  <div className="grid grid-cols-2 gap-4 w-full">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-accent">50+</div>
-                      <div className="text-sm text-gray-300">Programs</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-secondary">1000+</div>
-                      <div className="text-sm text-gray-300">Entrepreneurs</div>
-                    </div>
+                </motion.div>
+
+                {/* Green accent card */}
+                <div className="rounded-2xl bg-primary p-5 flex flex-col justify-between" style={{ flex: "0 0 auto", height: "140px" }}>
+                  <p className="text-accent font-black text-sm uppercase tracking-wide">Our Impact</p>
+                  <div>
+                    <p className="text-white font-black text-3xl">16+</p>
+                    <p className="text-white/70 text-sm font-medium">Years of operation</p>
                   </div>
                 </div>
+
+                <motion.div
+                  className="relative rounded-2xl overflow-hidden flex-1"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src={heroImages[2].src}
+                    alt={heroImages[2].alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1.5">
+                    <p className="text-xs font-bold text-primary">{heroImages[2].label}</p>
+                  </div>
+                </motion.div>
               </div>
             </div>
           </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
-          </motion.div>
+
         </div>
       </div>
     </section>
