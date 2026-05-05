@@ -134,114 +134,134 @@ function AboutSection() {
 }
 
 /* ── Services ───────────────────────────────────────────────── */
-const services = [
+const capabilityCards = [
   {
+    number: "01",
     icon: Lightbulb,
-    title: "Innovation Programs",
+    title: "Innovation Systems & Strategy",
     description:
-      "Incubators, accelerators, hackathons, and startup support tracks that move ventures from idea to investment readiness.",
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80",
-    highlight: false,
+      "We design the architecture of innovation ecosystems and venture pipelines that produce consistent, scalable outcomes.",
+    tags: ["Ecosystem Design", "Pipeline Architecture", "Strategy"],
+    bg: "#1B4332",
+    accent: "#a3e635",
+    decore: "rgba(163,230,53,0.12)",
   },
   {
+    number: "02",
     icon: BarChart3,
-    title: "Advisory & Consulting",
+    title: "Programs Design & Execution",
     description:
-      "We partner with governments, NGOs, and development agencies to design programs that produce measurable, repeatable outcomes.",
-    image: null,
-    highlight: true,
+      "We design, manage, and fully execute structured programs — from mobilisation to measurable field outcomes — for institutions and development partners.",
+    tags: ["Program Management", "Field Execution", "MEL Systems"],
+    bg: "#7C3A1E",
+    accent: "#e8a020",
+    decore: "rgba(232,160,32,0.12)",
   },
   {
+    number: "03",
     icon: Monitor,
-    title: "Digital Platforms",
+    title: "Digital Platforms for Entrepreneurs",
     description:
-      "We build digital tools that support entrepreneurs, MSMEs, and institutions — from tracking dashboards to market-linkage platforms.",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80",
-    highlight: false,
+      "We build digital infrastructure that supports entrepreneurship, enterprise growth, and ecosystem coordination across East Africa.",
+    tags: ["MSME Platforms", "Venture Tracking", "Ecosystem Tools"],
+    bg: "#162B40",
+    accent: "#38bdf8",
+    decore: "rgba(56,189,248,0.12)",
   },
 ];
 
 function ServicesSection() {
   return (
-    <section className="py-20 lg:py-28 bg-primary overflow-hidden">
+    <section className="py-20 lg:py-28 bg-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header row */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
           <div>
-            <p className="text-accent text-xs uppercase tracking-[0.2em] font-bold mb-3">Our Services</p>
-            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight max-w-lg">
-              Scale Ventures<br />with Our Expertise
+            <p className="text-primary text-xs uppercase tracking-[0.2em] font-bold mb-3">Our Services</p>
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight max-w-lg">
+              Three Capability<br />Areas
             </h2>
           </div>
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 text-white font-semibold text-sm border border-white/30 px-5 py-2.5 rounded-lg hover:bg-white/10 transition-colors flex-shrink-0"
+            className="inline-flex items-center gap-2 text-primary font-semibold text-sm border border-primary/30 px-5 py-2.5 rounded-lg hover:bg-primary hover:text-white transition-colors flex-shrink-0"
           >
             View All Services <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-4">
-          {services.map((svc, i) => {
-            const Icon = svc.icon;
-            if (svc.highlight) {
-              return (
-                <motion.div
-                  key={svc.title}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-accent rounded-2xl p-8 flex flex-col justify-between min-h-[340px]"
-                >
-                  <div>
-                    <div className="w-11 h-11 bg-primary/15 rounded-xl flex items-center justify-center mb-6">
-                      <Icon className="h-5 w-5 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-black text-primary mb-3">{svc.title}</h3>
-                    <p className="text-primary/75 text-sm leading-relaxed">{svc.description}</p>
-                  </div>
-                  <Link
-                    to="/services"
-                    className="inline-flex items-center gap-2 text-primary font-bold text-sm mt-6"
-                  >
-                    Learn more <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </motion.div>
-              );
-            }
+        {/* Colorful layered cards */}
+        <div className="grid md:grid-cols-3 gap-5">
+          {capabilityCards.map((card, i) => {
+            const Icon = card.icon;
             return (
               <motion.div
-                key={svc.title}
-                initial={{ opacity: 0, y: 24 }}
+                key={card.title}
+                initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
+                transition={{ duration: 0.55, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/8 border border-white/10 rounded-2xl overflow-hidden min-h-[340px] flex flex-col"
+                className="relative rounded-3xl overflow-hidden p-8 flex flex-col min-h-[380px]"
+                style={{ backgroundColor: card.bg }}
               >
-                {svc.image && (
-                  <div className="h-40 overflow-hidden flex-shrink-0">
-                    <img src={svc.image} alt={svc.title} className="w-full h-full object-cover" loading="lazy" />
+                {/* Layered decorative circles */}
+                <div className="absolute top-0 right-0 w-56 h-56 rounded-full -translate-y-1/3 translate-x-1/3 pointer-events-none"
+                  style={{ background: card.decore }} />
+                <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full translate-y-1/3 -translate-x-1/3 pointer-events-none"
+                  style={{ background: card.decore }} />
+                <div className="absolute top-1/2 left-1/2 w-24 h-24 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                  style={{ background: "rgba(255,255,255,0.04)" }} />
+
+                {/* Watermark number */}
+                <span className="absolute bottom-3 right-5 text-[100px] font-black leading-none pointer-events-none select-none"
+                  style={{ color: "rgba(255,255,255,0.06)" }}>
+                  {card.number}
+                </span>
+
+                {/* Content */}
+                <div className="relative z-10 flex flex-col flex-1">
+                  {/* Icon */}
+                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6 flex-shrink-0"
+                    style={{ background: card.decore, border: `1px solid ${card.accent}30` }}>
+                    <Icon className="h-6 w-6" style={{ color: card.accent }} />
                   </div>
-                )}
-                <div className="p-6 flex flex-col flex-1">
-                  <div className="w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center mb-4">
-                    <Icon className="h-5 w-5 text-accent" />
+
+                  {/* Number label */}
+                  <p className="text-xs font-black uppercase tracking-[0.2em] mb-3"
+                    style={{ color: card.accent }}>
+                    Capability {card.number}
+                  </p>
+
+                  <h3 className="text-xl font-black text-white leading-tight mb-3">
+                    {card.title}
+                  </h3>
+                  <p className="text-white/60 text-sm leading-relaxed mb-6 flex-1">
+                    {card.description}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {card.tags.map((tag) => (
+                      <span key={tag} className="text-[10px] font-bold px-2.5 py-1 rounded-full"
+                        style={{ background: card.decore, color: card.accent, border: `1px solid ${card.accent}25` }}>
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                  <h3 className="text-lg font-black text-white mb-2">{svc.title}</h3>
-                  <p className="text-white/60 text-sm leading-relaxed flex-1">{svc.description}</p>
+
                   <Link
                     to="/services"
-                    className="inline-flex items-center gap-2 text-accent font-bold text-sm mt-4"
+                    className="inline-flex items-center gap-2 font-bold text-xs px-4 py-2.5 rounded-lg w-fit transition-opacity hover:opacity-90"
+                    style={{ background: card.accent, color: "#111827" }}
                   >
-                    Learn more <ArrowRight className="h-4 w-4" />
+                    Learn More <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>
               </motion.div>
             );
           })}
         </div>
+
       </div>
     </section>
   );
