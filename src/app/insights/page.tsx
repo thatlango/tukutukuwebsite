@@ -2,94 +2,9 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { ArrowRight, Calendar, User, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router";
-
-/* ── Data ─────────────────────────────────────────────────── */
-
-const featured = {
-  tag: "Innovation",
-  date: "Apr 10, 2026",
-  title: "Building Innovation Ecosystems in Post-Conflict Communities",
-  excerpt:
-    "Northern Uganda has emerged as one of East Africa's most resilient innovation stories. We explore how community-embedded systems — not top-down programs — create lasting economic change across post-conflict districts.",
-  image:
-    "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=900&q=80",
-  author: { name: "Tuku-Tuku Team", role: "Innovation Labs" },
-};
-
-const posts = [
-  {
-    tag: "Entrepreneurship",
-    date: "Mar 22, 2026",
-    title: "From Idea to Market: What 1,200 Entrepreneurs Taught Us",
-    excerpt:
-      "After supporting over a thousand founders across Northern Uganda, patterns emerge. Here are the most common gaps — and how structured programs close them.",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80",
-    author: { name: "Programs Team", role: "Tuku-Tuku Labs" },
-  },
-  {
-    tag: "Advisory",
-    date: "Mar 8, 2026",
-    title: "How Development Partners Can Design Programs That Actually Work",
-    excerpt:
-      "Most innovation programs fail not from lack of funding — but lack of systems. We share the framework we use when advising governments and NGOs on program design.",
-    image:
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600&q=80",
-    author: { name: "Advisory Team", role: "Consulting" },
-  },
-  {
-    tag: "Digital Platforms",
-    date: "Feb 20, 2026",
-    title: "Building Tools That Entrepreneurs in East Africa Actually Use",
-    excerpt:
-      "Designing digital platforms for underconnected markets requires a different playbook. Low data, intermittent power, and feature phones are the baseline — not the exception.",
-    image:
-      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80",
-    author: { name: "Tech Team", role: "Platforms" },
-  },
-  {
-    tag: "Programs",
-    date: "Feb 5, 2026",
-    title: "What Makes a Hackathon Actually Useful for Local Entrepreneurs?",
-    excerpt:
-      "We've run over 30 hackathons across Northern Uganda. Most failed to produce lasting outcomes — until we changed the design. Here's what works.",
-    image:
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80",
-    author: { name: "Programs Team", role: "Tuku-Tuku Labs" },
-  },
-  {
-    tag: "Investment Readiness",
-    date: "Jan 18, 2026",
-    title: "Closing the Gap: Why African Startups Struggle to Attract Investment",
-    excerpt:
-      "It's rarely about the idea. Most promising ventures from our region fall at the investment readiness stage. We break down the systemic gaps — and how to fix them.",
-    image:
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
-    author: { name: "Investor Relations", role: "Tuku-Tuku Labs" },
-  },
-  {
-    tag: "Community",
-    date: "Jan 4, 2026",
-    title: "Community Is Not an Audience: Rethinking Participation in Innovation",
-    excerpt:
-      "Too many programs treat communities as beneficiaries. The ones that create lasting change treat them as architects. Here's what community-embedded innovation really looks like.",
-    image:
-      "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=600&q=80",
-    author: { name: "Tuku-Tuku Team", role: "Innovation Labs" },
-  },
-];
+import { featured, posts, tagColors } from "./data";
 
 const POSTS_PER_PAGE = 6;
-
-const tagColors: Record<string, string> = {
-  Innovation: "bg-primary/10 text-primary",
-  Entrepreneurship: "bg-secondary/10 text-secondary",
-  Advisory: "bg-accent/30 text-accent-foreground",
-  "Digital Platforms": "bg-blue-50 text-blue-700",
-  Programs: "bg-purple-50 text-purple-700",
-  "Investment Readiness": "bg-yellow-50 text-yellow-700",
-  Community: "bg-emerald-50 text-emerald-700",
-};
 
 function TagBadge({ tag }: { tag: string }) {
   const cls = tagColors[tag] ?? "bg-gray-100 text-gray-600";
@@ -99,8 +14,6 @@ function TagBadge({ tag }: { tag: string }) {
     </span>
   );
 }
-
-/* ── Page ─────────────────────────────────────────────────── */
 
 export default function InsightsPage() {
   const [page, setPage] = useState(1);
@@ -155,13 +68,16 @@ export default function InsightsPage() {
           transition={{ duration: 0.6 }}
           className="grid md:grid-cols-2 gap-8 mb-20 items-center"
         >
-          <div className="rounded-2xl overflow-hidden h-72 md:h-80">
+          <Link
+            to={`/insights/${featured.slug}`}
+            className="block rounded-2xl overflow-hidden h-72 md:h-80 group"
+          >
             <img
               src={featured.image}
               alt={featured.title}
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
-          </div>
+          </Link>
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="flex items-center gap-1.5 text-xs text-gray-400 font-medium">
@@ -170,9 +86,11 @@ export default function InsightsPage() {
               </div>
               <TagBadge tag={featured.tag} />
             </div>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight mb-4">
-              {featured.title}
-            </h2>
+            <Link to={`/insights/${featured.slug}`}>
+              <h2 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight mb-4 hover:text-primary transition-colors">
+                {featured.title}
+              </h2>
+            </Link>
             <p className="text-gray-500 leading-relaxed mb-6">{featured.excerpt}</p>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
@@ -185,7 +103,7 @@ export default function InsightsPage() {
                 </div>
               </div>
               <Link
-                to="#"
+                to={`/insights/${featured.slug}`}
                 className="inline-flex items-center gap-2 text-primary font-bold text-sm hover:gap-3 transition-all"
               >
                 Read More <ArrowRight className="h-4 w-4" />
@@ -206,21 +124,21 @@ export default function InsightsPage() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {paginated.map((post, i) => (
             <motion.article
-              key={post.title}
+              key={post.slug}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
               viewport={{ once: true }}
               className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover-lift group"
             >
-              <div className="h-44 overflow-hidden">
+              <Link to={`/insights/${post.slug}`} className="block h-44 overflow-hidden">
                 <img
                   src={post.image}
                   alt={post.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
-              </div>
+              </Link>
               <div className="p-5">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="flex items-center gap-1.5 text-xs text-gray-400 font-medium">
@@ -229,9 +147,11 @@ export default function InsightsPage() {
                   </div>
                   <TagBadge tag={post.tag} />
                 </div>
-                <h3 className="font-black text-gray-900 text-base leading-snug mb-2">
-                  {post.title}
-                </h3>
+                <Link to={`/insights/${post.slug}`}>
+                  <h3 className="font-black text-gray-900 text-base leading-snug mb-2 hover:text-primary transition-colors">
+                    {post.title}
+                  </h3>
+                </Link>
                 <p className="text-sm text-gray-500 leading-relaxed mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
@@ -246,7 +166,7 @@ export default function InsightsPage() {
                     </div>
                   </div>
                   <Link
-                    to="#"
+                    to={`/insights/${post.slug}`}
                     className="text-xs text-primary font-bold hover:underline inline-flex items-center gap-1"
                   >
                     Read <ArrowRight className="h-3 w-3" />
