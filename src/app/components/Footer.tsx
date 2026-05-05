@@ -9,6 +9,7 @@ const quickLinks = [
   { label: "Case Studies", to: "/case-studies" },
   { label: "Innovation", to: "/innovation" },
   { label: "Investors", to: "/investors" },
+  { label: "Insights", to: "/insights" },
   { label: "Contact", to: "/contact" },
 ];
 

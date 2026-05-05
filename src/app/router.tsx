@@ -8,6 +8,7 @@ import ProgramsPage from "./programs/page";
 import InnovationPage from "./innovation/page";
 import InvestorsPage from "./investors/page";
 import ContactPage from "./contact/page";
+import InsightsPage from "./insights/page";
 import { RouteError } from "./components/RouteError";
 
 export const router = createBrowserRouter([
@@ -24,6 +25,7 @@ export const router = createBrowserRouter([
       { path: "innovation", element: <InnovationPage /> },
       { path: "investors", element: <InvestorsPage /> },
       { path: "contact", element: <ContactPage /> },
+      { path: "insights", element: <InsightsPage /> },
     ],
   },
 ]);

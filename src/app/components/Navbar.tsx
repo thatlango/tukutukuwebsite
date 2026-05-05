@@ -9,6 +9,7 @@ const navItems = [
   { label: "Case Studies", href: "/case-studies" },
   { label: "Innovation", href: "/innovation" },
   { label: "Investors", href: "/investors" },
+  { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },
 ];
 
