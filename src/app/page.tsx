@@ -113,7 +113,7 @@ function AboutSection() {
         </div>
 
         {/* Stats row */}
-        <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-px bg-gray-100 rounded-2xl overflow-hidden">
+        <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-px bg-border rounded-2xl overflow-hidden shadow-sm">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
@@ -124,7 +124,7 @@ function AboutSection() {
               className="bg-white px-8 py-8 text-center"
             >
               <p className="text-4xl font-black text-primary mb-2">{stat.value}</p>
-              <p className="text-sm text-gray-500 font-medium">{stat.label}</p>
+              <p className="text-sm font-medium" style={{ color: "var(--muted-foreground)" }}>{stat.label}</p>
             </motion.div>
           ))}
         </div>
@@ -293,11 +293,11 @@ const whyUs = [
 
 function WhyUsSection() {
   return (
-    <section className="py-20 lg:py-28 bg-muted">
+    <section className="py-20 lg:py-28 bg-primary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-primary text-xs uppercase tracking-[0.2em] font-bold mb-3">Why Choose Us</p>
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+          <p className="text-accent text-xs uppercase tracking-[0.2em] font-bold mb-3">Why Choose Us</p>
+          <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
             Why Our Partners<br />Believe in Us
           </h2>
         </div>
@@ -312,13 +312,13 @@ function WhyUsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl p-6 border border-gray-100 hover-lift"
+                className="bg-white/8 border border-white/10 rounded-2xl p-6 hover:bg-white/12 transition-colors duration-200"
               >
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
-                  <Icon className="h-5 w-5 text-primary" />
+                <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mb-5">
+                  <Icon className="h-5 w-5 text-accent" />
                 </div>
-                <h3 className="font-black text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
+                <h3 className="font-black text-white mb-2">{item.title}</h3>
+                <p className="text-sm text-white/60 leading-relaxed">{item.description}</p>
               </motion.div>
             );
           })}
@@ -354,7 +354,7 @@ const audiences = [
 
 function AudienceSection() {
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-20 lg:py-28 bg-surface">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-14">
           <p className="text-primary text-xs uppercase tracking-[0.2em] font-bold mb-3">Who We Work With</p>
@@ -370,7 +370,7 @@ function AudienceSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               viewport={{ once: true }}
-              className="rounded-2xl overflow-hidden border border-gray-100 hover-lift bg-white"
+              className="rounded-2xl overflow-hidden border border-border hover-lift bg-white shadow-card"
             >
               <div className="h-40 overflow-hidden">
                 <img src={a.image} alt={a.label} className="w-full h-full object-cover" loading="lazy" />

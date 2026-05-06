@@ -27,8 +27,8 @@ export function Navbar() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white border-b border-gray-100 shadow-sm"
-          : "bg-white border-b border-gray-100"
+          ? "bg-white/95 backdrop-blur-sm border-b border-border shadow-sm"
+          : "bg-white border-b border-border"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-8">
@@ -50,14 +50,21 @@ export function Navbar() {
               key={item.href}
               to={item.href}
               className={({ isActive }) =>
-                `px-3 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 ${
+                `relative px-3 py-2 text-sm font-semibold transition-colors duration-200 ${
                   isActive
-                    ? "text-primary bg-primary/8"
-                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                    ? "text-primary"
+                    : "text-gray-500 hover:text-gray-900"
                 }`
               }
             >
-              {item.label}
+              {({ isActive }) => (
+                <>
+                  {item.label}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-primary rounded-full" />
+                  )}
+                </>
+              )}
             </NavLink>
           ))}
         </nav>
