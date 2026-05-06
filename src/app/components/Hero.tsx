@@ -47,9 +47,8 @@ export function Hero() {
               Lasting Impact.
             </h1>
 
-            <p className="text-lg text-gray-500 leading-relaxed mb-8 max-w-[480px]">
-              We design and implement innovation systems that build ventures,
-              strengthen institutions, and unlock economic opportunity across East Africa.
+            <p className="text-lg leading-relaxed mb-8 max-w-[440px]" style={{ color: "var(--muted-foreground)" }}>
+              We design and implement innovation systems that build ventures and unlock economic opportunity across East Africa.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
