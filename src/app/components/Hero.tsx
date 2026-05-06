@@ -35,12 +35,6 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            {/* Eyebrow badge */}
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 text-sm font-semibold mb-6">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
-              African Innovation Hub · Gulu, Uganda
-            </div>
-
             <h1 className="text-5xl sm:text-6xl lg:text-[68px] font-black text-gray-900 leading-[1.05] mb-6">
               Empowering<br />
               <span className="text-primary">Bold Ideas.</span><br />
