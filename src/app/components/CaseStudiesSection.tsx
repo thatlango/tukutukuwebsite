@@ -7,8 +7,8 @@ const studies = [
     tag: "University Ventures",
     tagColor: "#1a4731",
     name: "University Venture Labs Rollout",
-    problem: "Universities had entrepreneurship clubs but no consistent venture pipeline system.",
-    results: "3 universities adopted the model; 210 ventures progressed; 48 reached investment readiness.",
+    stat: "48",
+    statLabel: "ventures reached investment readiness across 3 universities",
     stage: "Validate → Build → Prepare",
     image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80",
   },
@@ -16,8 +16,8 @@ const studies = [
     tag: "MSME Accelerator",
     tagColor: "#7C3A1E",
     name: "Post-Conflict MSME Accelerator",
-    problem: "MSMEs lacked operational systems and market linkage support in post-conflict districts.",
-    results: "160 MSMEs supported; 72% reported revenue growth within 6 months; 35 supplier contracts secured.",
+    stat: "72%",
+    statLabel: "of 160 MSMEs reported revenue growth within 6 months",
     stage: "Train → Validate → Build",
     image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600&q=80",
   },
@@ -25,8 +25,8 @@ const studies = [
     tag: "Digital Platform",
     tagColor: "#162B40",
     name: "Partner Delivery Platform",
-    problem: "Multi-partner programs struggled with fragmented reporting and low execution visibility.",
-    results: "500+ ventures tracked; reporting cycle time reduced 40%; partner turnaround improved.",
+    stat: "500+",
+    statLabel: "ventures tracked with 40% faster partner reporting cycles",
     stage: "Build → Prepare → Connect",
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80",
   },
@@ -36,7 +36,6 @@ export function CaseStudiesSection() {
   return (
     <section id="case-studies" className="py-20 lg:py-28 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header row */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
           <div>
             <p className="text-primary text-xs uppercase tracking-[0.2em] font-bold mb-3">Case Studies</p>
@@ -78,17 +77,14 @@ export function CaseStudiesSection() {
                 </span>
               </div>
               <div className="p-6">
-                <h3 className="font-black text-gray-900 text-lg mb-3 leading-snug">{study.name}</h3>
-                <div className="space-y-2 mb-4">
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--muted-foreground)" }}>
-                    <span className="font-semibold text-gray-700">Challenge: </span>
-                    {study.problem}
-                  </p>
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--muted-foreground)" }}>
-                    <span className="font-semibold text-gray-700">Results: </span>
-                    {study.results}
-                  </p>
+                <h3 className="font-black text-gray-900 text-lg mb-5 leading-snug">{study.name}</h3>
+
+                {/* Impact stat */}
+                <div className="rounded-xl p-4 mb-5 bg-surface border border-border">
+                  <p className="text-3xl font-black text-primary leading-none mb-1">{study.stat}</p>
+                  <p className="text-xs leading-relaxed" style={{ color: "var(--muted-foreground)" }}>{study.statLabel}</p>
                 </div>
+
                 <div className="flex items-center justify-between pt-4 border-t border-border">
                   <span className="text-xs text-primary font-bold uppercase tracking-wider">{study.stage}</span>
                   <ArrowUpRight className="h-4 w-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
