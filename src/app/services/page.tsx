@@ -110,18 +110,17 @@ export default function ServicesPage() {
   return (
     <main>
       {/* ── Hero ──────────────────────────────────────────── */}
-      <section className="py-20 lg:py-28 bg-muted">
+      <section className="py-20 lg:py-28 bg-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-primary text-xs uppercase tracking-[0.2em] font-bold mb-4">
+            <p className="text-accent text-xs uppercase tracking-[0.2em] font-bold mb-4">
               What We Do
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6">
-              We design and implement systems that turn innovation into measurable economic outcomes.
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
+              Systems That Turn Innovation Into Outcomes
             </h1>
-            <p className="text-lg text-gray-500 leading-relaxed">
-              We work across strategy, program implementation, and digital infrastructure to build
-              innovation systems that produce real results.
+            <p className="text-white/65 text-lg">
+              Strategy, program implementation, and digital infrastructure — built to produce real results.
             </p>
           </div>
         </div>
@@ -256,34 +255,25 @@ export default function ServicesPage() {
       </section>
 
       {/* ── What Makes Us Different ───────────────────────── */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-surface">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-primary text-xs uppercase tracking-[0.2em] font-bold mb-3">
-                Our Difference
-              </p>
-              <h2 className="text-4xl font-black text-gray-900 leading-tight mb-6">
-                What Makes Us Different
-              </h2>
-              <div className="space-y-4">
+              <p className="text-primary text-xs uppercase tracking-[0.2em] font-bold mb-3">Our Difference</p>
+              <h2 className="text-4xl font-black text-gray-900 leading-tight mb-6">What Makes Us Different</h2>
+              <div className="space-y-3">
                 {differentiators.map((d) => (
-                  <div key={d} className="flex items-start gap-4 bg-white rounded-xl p-4 border border-gray-100">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <p className="text-gray-700 font-medium text-sm leading-relaxed">{d}</p>
+                  <div key={d} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-border">
+                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                    <p className="text-gray-700 font-semibold text-sm">{d}</p>
                   </div>
                 ))}
               </div>
             </div>
 
             <div>
-              <p className="text-primary text-xs uppercase tracking-[0.2em] font-bold mb-3">
-                Outcome Standard
-              </p>
-              <h2 className="text-4xl font-black text-gray-900 leading-tight mb-6">
-                What We Deliver
-              </h2>
-              <p className="text-gray-500 mb-5 text-sm">Every engagement must produce at least one of:</p>
+              <p className="text-primary text-xs uppercase tracking-[0.2em] font-bold mb-3">Outcome Standard</p>
+              <h2 className="text-4xl font-black text-gray-900 leading-tight mb-6">What We Deliver</h2>
               <div className="grid grid-cols-2 gap-3">
                 {outcomeStandards.map((s, i) => (
                   <motion.div
@@ -292,7 +282,7 @@ export default function ServicesPage() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: i * 0.06 }}
                     viewport={{ once: true }}
-                    className="bg-white rounded-xl p-4 border border-gray-100 flex items-start gap-3"
+                    className="bg-white rounded-xl p-4 border border-border shadow-card flex items-start gap-3"
                   >
                     <div className="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0" />
                     <span className="text-sm font-semibold text-gray-800">{s}</span>

@@ -91,7 +91,7 @@ export default function InsightsPage() {
                 {featured.title}
               </h2>
             </Link>
-            <p className="text-gray-500 leading-relaxed mb-6">{featured.excerpt}</p>
+            <p className="leading-relaxed mb-6" style={{ color: "var(--muted-foreground)" }}>{featured.excerpt}</p>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full bg-primary/15 flex items-center justify-center">
@@ -129,7 +129,7 @@ export default function InsightsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover-lift group"
+              className="bg-white rounded-2xl border border-border overflow-hidden shadow-card hover:shadow-panel transition-shadow group"
             >
               <Link to={`/insights/${post.slug}`} className="block h-44 overflow-hidden">
                 <img
@@ -155,7 +155,7 @@ export default function InsightsPage() {
                 <p className="text-sm text-gray-500 leading-relaxed mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
-                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                <div className="flex items-center justify-between pt-4 border-t border-border">
                   <div className="flex items-center gap-2">
                     <div className="w-7 h-7 rounded-full bg-primary/15 flex items-center justify-center">
                       <User className="h-3.5 w-3.5 text-primary" />
@@ -183,7 +183,7 @@ export default function InsightsPage() {
             <button
               onClick={() => setPage((p) => Math.max(1, p - 1))}
               disabled={page === 1}
-              className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:border-primary hover:text-primary disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+              className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-gray-500 hover:border-primary hover:text-primary disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
@@ -194,7 +194,7 @@ export default function InsightsPage() {
                 className={`w-9 h-9 rounded-full text-sm font-bold transition-colors ${
                   n === page
                     ? "bg-primary text-white"
-                    : "border border-gray-200 text-gray-600 hover:border-primary hover:text-primary"
+                    : "border border-border text-gray-600 hover:border-primary hover:text-primary"
                 }`}
               >
                 {n}
@@ -203,7 +203,7 @@ export default function InsightsPage() {
             <button
               onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
               disabled={page === totalPages}
-              className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:border-primary hover:text-primary disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+              className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-gray-500 hover:border-primary hover:text-primary disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
             >
               <ChevronRight className="h-4 w-4" />
             </button>
